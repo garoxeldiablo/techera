@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, } from '@heroicons/react/24/outline'
-import { Carousel,Card,Rating,RatingStar } from 'flowbite-react'
+import { Carousel,Card,Rating,RatingStar, Accordion, AccordionContent, AccordionPanel, AccordionTitle } from 'flowbite-react'
 
 const navigation = [
   { name: 'Home', href: '#', current: false },
@@ -17,7 +17,7 @@ function classNames(...classes) {
 export default function App() {
   return (
     <>
-    <Disclosure as="nav" className="bg-white shadow-md">
+    <Disclosure as="nav" className="bg-white shadow-md fixed z-10 w-full">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ export default function App() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-white text-gray-900' : 'text-gray-900 hover:bg-blue-700 hover:text-white',
+                          item.current ? 'bg-white text-gray-900' : 'text-gray-900 hover:bg-blue-600 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-semibold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -98,7 +98,7 @@ export default function App() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                           >
                             Your Profile
                           </a>
@@ -108,7 +108,7 @@ export default function App() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                           >
                             Settings
                           </a>
@@ -118,7 +118,7 @@ export default function App() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                           >
                             Sign out
                           </a>
@@ -139,7 +139,7 @@ export default function App() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'text-blue-900 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -157,7 +157,7 @@ export default function App() {
 
     {/* hero */}
     <section>
-      <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+      <div class="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
         <div class="flex w-full mx-auto text-left">
           <div class="relative inline-flex items-center mx-auto align-middle">
             <div class="text-center">
@@ -302,16 +302,16 @@ export default function App() {
     {/* card */}
 
     {/* technician */}
-    <div className='my-32'>
+    <div className='my-32 py-8'>
     <div className='text-center'>
       <h1 className='text-4xl text-blue-800 font-semibold my-2'>Our Technician</h1>
       <p className='text-gray-500'>Experienced technicians who have successfully resolved many computer problems</p>
     </div>
     <div className='md:flex justify-center md:mt-4'>
       <div className='gap-x-4 justify-center mx-9 md:flex'>
-      <Card className="max-w-sm m-4" imgSrc="me1.jpg" horizontal>
+      <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="me1.jpg" horizontal>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Jovis Jocunda
+          Jovis
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
           Software
@@ -328,12 +328,12 @@ export default function App() {
             <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
           </div>
         </Card>
-        <Card className="max-w-sm m-4" imgSrc="me1.jpg" horizontal>
+        <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="a.jpg" horizontal>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Jovis Jocunda
+          Agus Bisana
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-          Software
+          Hardware
           </p>
           <Rating>
           <RatingStar />
@@ -347,16 +347,16 @@ export default function App() {
             <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
           </div>
         </Card>
-    </div>
+      </div>
     </div>
     <div className='md:flex justify-center md:mt-4'>
       <div className='gap-x-4 justify-center mx-9 md:flex'>
-      <Card className="max-w-sm m-4" imgSrc="me1.jpg" horizontal>
+      <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="g.jpg" horizontal>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Jovis Jocunda
+          Gideon Aji
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-          Software
+          Network
           </p>
           <Rating>
           <RatingStar />
@@ -370,12 +370,12 @@ export default function App() {
             <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
           </div>
         </Card>
-        <Card className="max-w-sm m-4" imgSrc="me1.jpg" horizontal>
+        <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="s.jpg" horizontal>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Jovis Jocunda
+          Shaela
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-          Software
+          Cyber Security
           </p>
           <Rating>
           <RatingStar />
@@ -389,9 +389,78 @@ export default function App() {
             <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
           </div>
         </Card>
+      </div>
     </div>
+  </div>
+
+  {/* qna */}
+  <div className='my-32 py-8'>
+    <div className='md:flex justify-center p-6'>
+      <div className='max-w-md mb-4'>
+        <h1 className='text-4xl text-blue-800 font-semibold my-2'>Frequently Asked Questions</h1>
+        <p className='text-gray-500'>Here are our frequently asked questions for quick solutions to common inquiries.</p>
+        <p className="mb-2 text-gray-700 dark:text-gray-400 font-bold">
+              Have other question?
+        </p>
+        <button className='p-2 bg-blue-800 text-white w-36 rounded-md'>Ask more</button>
+      </div>
+      <div className='max-w-sm'>
+        <Accordion>
+          <AccordionPanel>
+            <AccordionTitle>What is techera?</AccordionTitle>
+            <AccordionContent>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              Techera is an online consultation and service platform that provides convenience for those who have computer problems, especially software and data management. Solve cases that often occur on computer devices such as application setup, disk management, driver installation, and Windows update troubleshooting.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
+          <AccordionPanel>
+            <AccordionTitle>techera comes from?</AccordionTitle>
+            <AccordionContent>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              Techera was founded by a group of Infinite Learning students, namely Segara Samudra.
+              </p>
+            </AccordionContent>
+          </AccordionPanel>
+          <AccordionPanel>
+            <AccordionTitle>How to use Techera features?</AccordionTitle>
+            <AccordionContent>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              Currently the Techera feature is not yet available and is in the development stage
+              </p>
+              
+            </AccordionContent>
+          </AccordionPanel>
+        </Accordion>
+      </div>
     </div>
+  </div>
+
+  {/* footer */}
+  <div className='max-h-svh bg-blue-800'>
+    <div className='md:flex justify-between p-8'>
+      <div>
+          <img className='h-10 rounded-lg' src="ss.png" alt="" />
+          <p className='text-white'>segara@example.com</p>
+          <div className='flex gap-4 mt-10'>
+            <svg className='w-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Google"><path d="M896 786h725q12 67 12 128 0 217-91 387.5T1282.5 1568 896 1664q-157 0-299-60.5T352 1440t-163.5-245T128 896t60.5-299T352 352t245-163.5T896 128q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65T484 652.5 420 896t64 243.5T657.5 1316t238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78H896V786z" fill="#ffffff" class="color000000 svgShape"></path></svg>
+            <svg className='w-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Facebook"><path d="M1376 128q119 0 203.5 84.5T1664 416v960q0 119-84.5 203.5T1376 1664h-188v-595h199l30-232h-229V689q0-56 23.5-84t91.5-28l122-1V369q-63-9-178-9-136 0-217.5 80T948 666v171H748v232h200v595H416q-119 0-203.5-84.5T128 1376V416q0-119 84.5-203.5T416 128h960z" fill="#ffffff" class="color000000 svgShape"></path></svg>
+          </div>
+      </div>
+      <div>
+          <img className='h-10 m-6' src="techera2.png" alt="" />
+          <h1 className='text-white font-semibold'>A product of techera</h1>
+      </div>
+      <div>
+        <h1 className='text-white font-semibold text-lg'>Quick links</h1>
+        <a href="#"><p className='text-white'>Consultation</p></a>
+        <a href="#"><p className='text-white'>Remote</p></a>
+        <a href="#"><p className='text-white'>Blog</p></a>
+        <p className='text-white mt-10'>2024 techera. All right reserved</p>
+      </div>
     </div>
-    </>
+  </div>
+  {/* footer */}
+  </>
   )
 }
