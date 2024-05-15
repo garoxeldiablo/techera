@@ -1,34 +1,45 @@
-"use client";
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
-export function Login() {
+export function Signup() {
+  useEffect(() => {
+    Aos.init({
+        duration: 1000,
+        once: true
+    })
+  })
+
   return (
-<div class="flex h-screen">
-  <div class="w-2/5 hidden items-center justify-center lg:flex bg-white text-black">
-    <img className="h-screen object-none" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+<div class="flex h-scree">
+  <div class="w-2/5 hidden items-center justify-center lg:flex bg-blue-700 text-black">
+    <img className="h-screen object-none opacity-50" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
   </div>
-  <div class="w-full bg-gray-100 flex items-center justify-center">
-    <div class="max-w-md w-full p-6">
-        <div className="w-5">
+  <div class="w-full bg-white flex items-center justify-center">
+    <div data-aos="fade-up" class="max-w-md w-full p-6">
+        <div className="w-6 mb-3">
             <a href="#"><svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#9C9C9C"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>cancel</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="work-case" fill="#9C9C9C" transform="translate(91.520000, 91.520000)"> <polygon id="Close" points="328.96 30.2933333 298.666667 1.42108547e-14 164.48 134.4 30.2933333 1.42108547e-14 1.42108547e-14 30.2933333 134.4 164.48 1.42108547e-14 298.666667 30.2933333 328.96 164.48 194.56 298.666667 328.96 328.96 298.666667 194.56 164.48"> </polygon> </g> </g> </g></svg>
             </a>
         </div>
-      <h1 class="text-3xl font-semibold mb-6 text-black text-center">Welcome to techera.id</h1>
-      <h1 class="text-md font-semibold mb-6 text-gray-500 text-center">Create your account</h1>
+        <div className="text-center">
+          <h1 class="text-4xl font-semibold mb-6 bg-gradient-to-r from-blue-600 to-black inline-block text-transparent bg-clip-text">Welcome to techera.id</h1>
+          <h1 class="text-md font-semibold mb-6 text-gray-500 text-center">Create your account</h1>
+        </div>
       <form action="#" method="POST" class="space-y-4">
         <div>
           <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-          <input type="text" id="username" name="username" class="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"/>
+          <input type="text" id="username" name="username" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='new username'/>
         </div>
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="text" id="email" name="email" class="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"/>
+          <input type="text" id="email" name="email" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='your email'/>
         </div>
         <div>
           <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-          <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"/>
+          <input type="password" id="password" name="password" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='new password'/>
         </div>
         <div>
-          <button type="submit" class="w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Sign Up</button>
+          <button type="submit" class="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Create Account</button>
         </div>
         <div class="mt-4 text-sm text-gray-600 text-center">
             <p>or with this</p>
@@ -52,7 +63,7 @@ export function Login() {
       </div>
       </form>
       <div class="mt-4 text-sm text-gray-600 text-center">
-        <p>Already have an account? <a href="#" class="text-black hover:underline">Login here</a>
+        <p>Already have an account? <a href="" class="text-black hover:underline">Login here</a>
         </p>
       </div>
     </div>
