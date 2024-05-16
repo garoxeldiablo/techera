@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, } from '@heroicons/react/24/outline'
+import { Outlet } from 'react-router-dom'
 
 const navigation = [
     { name: 'Home', href: '#', current: false },
@@ -13,7 +14,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar(){
+export default function NavbarClient(){
     return(
         <>
             <Disclosure as="nav" className="bg-white shadow-md fixed z-10 w-full">
@@ -151,6 +152,8 @@ export default function Navbar(){
                 </>
             )}
             </Disclosure>
+
+            <Outlet/>
         </>
     )
 }

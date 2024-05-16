@@ -1,11 +1,10 @@
-// import  Navbar  from "./components/navbarclient.jsx";
-// import Clientarea from "./components/clientarea.jsx";
-import { SignIn } from "./components/signin.jsx";
+import { BrowserRouter } from "react-router-dom";
+import MainApp from "./mainapp";
 
 export default function App(){
     return(
-        <>
-        <SignIn/>
-        </>
+        <BrowserRouter>
+            <MainApp/>
+        </BrowserRouter>
     )
 }

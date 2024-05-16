@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import { Carousel,Card,Rating,RatingStar, Accordion, AccordionContent, AccordionPanel, AccordionTitle } from 'flowbite-react'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import NavbarGuest from './navbarguest';
 
-
-export default function Clientarea() {
+export default function Home() {
   useEffect(() => {
     Aos.init({
         duration: 1000,
@@ -14,6 +14,9 @@ export default function Clientarea() {
 
   return (
     <>
+    {/* navbar */}
+    <NavbarGuest/>
+
     {/* hero */}
     <section>
       <div class="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
