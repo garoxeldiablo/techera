@@ -60,7 +60,7 @@ export default function NavbarGuest(){
                         </div>
                         </div>
                     </div>
-                    <button className='bg-blue-700 text-white py-2 px-3 rounded-md transition ease-in delay-20 hover:bg-blue-600' onClick={()=>navigate('/signin')}>SignIn</button>
+                    <button className='bg-blue-700 text-white py-2 px-3 rounded-md transition ease-in delay-20 hover:bg-blue-600' onClick={()=>navigate('/signin')}>Sign In</button>
                     </div>
                 </div>
 

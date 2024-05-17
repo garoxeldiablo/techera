@@ -6,58 +6,113 @@ export default function EditProfile() {
       {/* Navbar */}
       <NavbarClient />
 
-      {/* Back button */}
-      <div class="relative items-center w-full mx-auto md:px-12 lg:px-16 max-w-7xl py-28 left-48">
-        <div className="ChangeProfile text-blue-800 text-3xl font-bold leading-10">Change Profile</div>
-      </div>
-      
-
-      {/* Change Image */}
-      <div class="relative items-center w-full mx-auto md:px-12 lg:px-16 max-w-7xl bottom-14 left-48">
-      <img
-        className="Ellipse118 w-36 h-36 rounded-full border-4 border-blue-800"
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-      />
-      <div className="ml-48 relative bottom-24">
-        <h2 className="NamaUser font-semibold text-blue-800 text-4xl leading-10">
-        Agus Bisana
-        </h2>
-      </div>
-      <div className="relative bottom-8 left-5">
-        <p className="text-blue-800 underline">Change image</p>
-      </div>
-      </div>
-
-      {/* Form */}
-      <div class="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
-        <form class="max-w-sm mx-auto">
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your email
-          </label>
-          <input
-            type="email"
-            id="email"
-            aria-describedby="helper-text-explanation"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="name@flowbite.com"
-          />
-
-          <p
-            id="helper-text-explanation"
-            class="mt-2 text-sm text-gray-500 dark:text-gray-400"
-          >
-            We’ll never share your details. Read our{" "}
-            <a
-              href="#"
-              class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+      {/* Main container to shift down the content */}
+      <div className="relative main-content top-24 px-10">
+        {" "}
+        
+        {/* Back button and Change Profile text */}
+        <div className=" relative flex items-center mb-10 ml-40">
+          <button className="text-blue-800 text-2xl mr-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6"
             >
-              Privacy Policy
-            </a>
-            .
-          </p>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
+            Change Profile
+          </div>
+        </div>
+
+        {/* Change Image */}
+        <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center mb-10">
+          <h2 className="NamaUser font-semibold text-blue-800 text-4xl leading-10 mt-1">
+            Agus Bisana
+          </h2>
+          <img
+            className="Ellipse118 w-36 h-36 rounded-full border-4 border-blue-800 mt-5"
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          />
+          <button className="text-blue-800 underline mt-2">Change image</button>
+        </div>
+        {/* Form */}
+        <form className="space-y-5 relative max-w-4xl mx-auto p-8">
+          <div className="name w-full">
+            <label className="block mb-2 text-sm font-semibold text-black">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
+              placeholder="Agus Bisana"
+            />
+          </div>
+          <div className="flex space-x-5">
+            <div className="email w-full">
+              <label className="block mb-2 text-sm font-semibold text-black">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
+                placeholder="aguspalingganteng@gmail.com"
+              />
+            </div>
+            <div className="phone-number w-full">
+              <label className="block mb-2 text-sm font-semibold text-black">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="phone-number"
+                className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
+                placeholder="08129988776655"
+              />
+            </div>
+          </div>
+          <div className="flex space-x-5">
+            <div className="email w-full">
+              <label className="block mb-2 text-sm font-semibold text-black">
+                Change Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
+                placeholder="Enter your current password"
+              />
+            </div>
+            <div className="phone-number w-full mt-7">
+              <input
+                type="password"
+                id="new-password"
+                className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
+                placeholder="Enter your new password"
+              />
+              <p
+                id="helper-text-explanation"
+                className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-xs"
+              >
+                Password must be at least{" "}
+                <span className="text-green-500">8 Characters</span> and must
+                contain at least{" "}
+                <span className="text-green-500">a Capital Letter</span>,{" "}
+                <span className="text-green-500">a Number</span> and{" "}
+                <span className="text-green-500">a Special Character</span>.
+              </p>
+            </div>
+          </div>
         </form>
       </div>
     </>
