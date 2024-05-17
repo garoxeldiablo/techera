@@ -3,7 +3,7 @@ import { Routes ,Route, useLocation } from "react-router-dom";
 // import { SignUp } from "./components/signup.jsx";
 // import NavbarClient from "./components/navbarclient.jsx";
 // import Home from "./components/home.jsx";
-import EditProfile from "./components/editprofile.jsx";
+// import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
 
 
