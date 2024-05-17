@@ -5,6 +5,7 @@ import { Routes ,Route, useLocation } from "react-router-dom";
 // import Home from "./components/home.jsx";
 import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
+import Blog from "./components/blog.jsx";
 
 
 export default function MainApp(){
@@ -19,7 +20,8 @@ export default function MainApp(){
         
         {/* <EditProfile/> */}
 
-        <Forum/>
+        {/* <Forum/> */}
+        <Blog/>
         </>
         
     )
