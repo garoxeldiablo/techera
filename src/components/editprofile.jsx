@@ -100,7 +100,7 @@ export default function EditProfile() {
               />
               <p
                 id="helper-text-explanation"
-                className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-xs"
+                className="mt-2 text-gray-500 dark:text-gray-400 text-xs"
               >
                 Password must be at least{" "}
                 <span className="text-green-500">8 Characters</span> and must
@@ -188,7 +188,7 @@ export default function EditProfile() {
           </div>
         </div>
       </div>
-      {/* footer */}
+      
     </>
   );
 }
