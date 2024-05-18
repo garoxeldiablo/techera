@@ -38,7 +38,7 @@ export function SignIn() {
               <input type="password" id="password" name="password" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='enter your password'/>
             </div>
             <div>
-              <button type="submit" class="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Login</button>
+              <button onClick={()=> navigate('/clientarea')} type="submit" class="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Login</button>
             </div>
             <div class="mt-4 text-sm text-gray-600 text-center">
                 <p>or with this</p>
