@@ -4,8 +4,9 @@ import { Routes ,Route, useLocation } from "react-router-dom";
 // import NavbarClient from "./components/navbarclient.jsx";
 // import Home from "./components/home.jsx";
 // import EditProfile from "./components/editprofile.jsx";
-import Forum from "./components/forum.jsx";
-import Blog from "./components/blog.jsx";
+// import Forum from "./components/forum.jsx";
+// import Blog from "./components/blog.jsx";
+import BookAlert from "./components/riyan.jsx";
 
 
 export default function MainApp(){
@@ -21,7 +22,8 @@ export default function MainApp(){
         {/* <EditProfile/> */}
 
         {/* <Forum/> */}
-        <Blog/>
+        {/* <Blog/> */}
+        <BookAlert/>
         </>
         
     )
