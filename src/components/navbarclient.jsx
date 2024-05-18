@@ -4,10 +4,10 @@ import { Bars3Icon, BellIcon, XMarkIcon, } from '@heroicons/react/24/outline'
 import { Outlet } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Home', href: '#', current: false },
+    { name: 'Home', href: '/', current: false },
     { name: 'Consultation', href: '#', current: false },
-    { name: 'Blog', href: '#', current: false },
-    { name: 'Forum', href: '#', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Forum', href: '/forum', current: false },
 ]
   
 function classNames(...classes) {
@@ -49,8 +49,8 @@ export default function NavbarClient(){
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(
-                                item.current ? 'bg-white text-gray-900' : 'text-gray-900 hover:bg-blue-600 hover:text-white',
-                                'rounded-md px-3 py-2 text-sm font-semibold'
+                                item.current ? "border-b-2 border-b-blue-700" : "transition ease-in delay-20 border-b-2 border-white hover:border-b-blue-700",
+                                'px-3 py-2 text-md'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                             >
@@ -107,17 +107,7 @@ export default function NavbarClient(){
                             <Menu.Item>
                                 {({ active }) => (
                                 <a
-                                    href="#"
-                                    className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
-                                >
-                                    Settings
-                                </a>
-                                )}
-                            </Menu.Item>
-                            <Menu.Item>
-                                {({ active }) => (
-                                <a
-                                    href="#"
+                                    href="/signup"
                                     className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                                 >
                                     Sign out
