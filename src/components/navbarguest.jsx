@@ -3,10 +3,10 @@ import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
 import { Outlet, useNavigate } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Home', href: '#', current: true },
+    { name: 'Home', href: '/', current: false },
     { name: 'Consultation', href: '#', current: false },
-    { name: 'Blog', href: '#', current: false },
-    { name: 'Forum', href: '#', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Forum', href: '/forum', current: false },
 ]
   
 function classNames(...classes) {
@@ -49,7 +49,7 @@ export default function NavbarGuest(){
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(
-                                item.current ? "border-b-2 border-b-blue-700" : "transition ease-in delay-20 hover:border-b-2 hover:border-b-blue-700",
+                                item.current ? "border-b-2 border-b-blue-700" : "transition ease-in delay-20 border-b-2 border-white hover:border-b-blue-700",
                                 'px-3 py-2 text-md'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
