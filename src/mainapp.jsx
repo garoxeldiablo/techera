@@ -17,7 +17,7 @@ import ClientArea from "./components/clientarea.jsx";
 import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
 import Blog from "./components/blog.jsx";
-// import BookAlert from "./components/riyan.jsx";
+// import BookAlert from "./components/bookalert.jsx";
 >>>>>>> f422e5588ed788f62642c08eeefaf6172a192e64
 
 
