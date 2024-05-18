@@ -110,7 +110,11 @@ export default function Forum() {
               </button>
               <button className="text-neutral-600 mr-5">Latest Topics</button>
             </div>
-            <button className="text-blue-800">Create Post +</button>
+            <a 
+            href="/createpost" 
+            className="text-blue-800">
+              Create Post +
+            </a>
           </div>
 
           {/* Card Topic */}
@@ -184,7 +188,7 @@ export default function Forum() {
                 </div>
               </div>
             </div>
-            
+
             <div className="post2 max-w-4xl mx-auto p-4">
               <div className="border-2 border-blue-800 rounded-lg flex items-center p-2">
                 <div className="relative ml-6 flex items-center gap-3 bottom-10">
@@ -193,7 +197,9 @@ export default function Forum() {
                     src="https://randomuser.me/api/portraits/men/75.jpg"
                     alt="Profile"
                   />
-                  <div className="text-sm font-medium text-gray-900">Andre Tahulani</div>
+                  <div className="text-sm font-medium text-gray-900">
+                    Andre Tahulani
+                  </div>
                 </div>
                 <div className="relative flex-grow right-36 mt-14">
                   <div className="mt-2 text-lg font-medium text-gray-900">
@@ -262,11 +268,13 @@ export default function Forum() {
                     src="https://akcdn.detik.net.id/community/media/visual/2024/03/14/rigen_43.jpeg?w=700&q=90"
                     alt="Profile"
                   />
-                  <div className="text-sm font-medium text-gray-900">Regin sih</div>
+                  <div className="text-sm font-medium text-gray-900">
+                    Regin sih
+                  </div>
                 </div>
                 <div className="relative flex-grow right-28 mt-14">
                   <div className="mt-2 text-lg font-medium text-gray-900">
-                  Processor mana yang lebih bagus untuk digunakan ber...
+                    Processor mana yang lebih bagus untuk digunakan ber...
                   </div>
                   <div className="mt-2 text-sm text-gray-500">22/12/2024</div>
                 </div>
@@ -331,11 +339,13 @@ export default function Forum() {
                     src="https://i.pinimg.com/originals/2d/12/9f/2d129f90385f300e88a9c7c4512ab8ac.jpg"
                     alt="Profile"
                   />
-                  <div className="text-sm font-medium text-gray-900">Caca Marica</div>
+                  <div className="text-sm font-medium text-gray-900">
+                    Caca Marica
+                  </div>
                 </div>
                 <div className="relative flex-grow right-32 mt-14">
                   <div className="mt-2 text-lg font-medium text-gray-900">
-                  Klo buat ngedit mending macbook atau zenbook gais?
+                    Klo buat ngedit mending macbook atau zenbook gais?
                   </div>
                   <div className="mt-2 text-sm text-gray-500">02/02/2024</div>
                 </div>
@@ -391,9 +401,7 @@ export default function Forum() {
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
 
