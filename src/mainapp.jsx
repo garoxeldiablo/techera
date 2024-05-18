@@ -6,9 +6,7 @@ import ClientArea from "./components/clientarea.jsx";
 import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
 import Blog from "./components/blog.jsx";
-import CreatePost from "./components/createpost.jsx";
-// import BookAlert from "./components/riyan.jsx";
-
+import BookAlert from "./components/bookalert.jsx";
 
 export default function MainApp(){
     return(
@@ -22,6 +20,7 @@ export default function MainApp(){
             <Route path="/forum" element={<Forum />}/>
             <Route path="/createpost" element={<CreatePost />}/>
             <Route path="/blog" element={<Blog />}/>
+            <Route path="/bookalert" element={<BookAlert />}/>
         </Routes>
         {/* <BookAlert/> */}
         </>
