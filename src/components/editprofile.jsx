@@ -6,12 +6,13 @@ export default function EditProfile() {
       {/* Navbar */}
       <NavbarClient />
 
-      {/* Main container to shift down the content */}
       <div className="relative main-content top-24 px-10 mb-36">
         
         {/* Back button and Change Profile text */}
         <div className=" relative flex items-center mb-10 ml-40">
-          <button className="text-blue-800 text-2xl mr-2">
+          <a 
+          href="/clientarea"
+          className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -26,11 +27,12 @@ export default function EditProfile() {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-          </button>
+          </a>
           <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
             Change Profile
           </div>
         </div>
+
         {/* Change Image */}
         <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center mb-10">
           <h2 className="NamaUser font-semibold text-blue-800 text-4xl leading-10 mt-1">
@@ -112,6 +114,7 @@ export default function EditProfile() {
             </div>
           </div>
         </form>
+
         {/* Save Button */}
         <div className="flex flex-col items-center mt-5">
           <button
