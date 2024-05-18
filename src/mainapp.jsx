@@ -6,7 +6,7 @@ import { Routes ,Route, useLocation } from "react-router-dom";
 // import EditProfile from "./components/editprofile.jsx";
 // import Forum from "./components/forum.jsx";
 // import Blog from "./components/blog.jsx";
-import BookAlert from "./components/riyan.jsx";
+import BookAlert from "./components/bookalert.jsx";
 
 
 export default function MainApp(){
