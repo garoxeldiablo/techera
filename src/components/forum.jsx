@@ -1,4 +1,5 @@
 import NavbarClient from "./navbarclient";
+import { Link } from "react-router-dom";
 
 export default function Forum() {
   return (
@@ -110,11 +111,10 @@ export default function Forum() {
               </button>
               <button className="text-neutral-600 mr-5">Latest Topics</button>
             </div>
-            <a 
-            href="/createpost" 
+            <Link to="createpost"
             className="text-blue-800">
               Create Post +
-            </a>
+            </Link>
           </div>
 
           {/* Card Topic */}
