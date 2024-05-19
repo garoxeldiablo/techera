@@ -8,10 +8,6 @@ import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
 import Blog from "./components/blog.jsx";
 import BookAlert from "./components/bookalert.jsx";
-<<<<<<< Updated upstream
-import CreatePost from "./components/createpost.jsx"; 
-=======
->>>>>>> Stashed changes
 
 export default function MainApp(){
     return(
