@@ -7,7 +7,7 @@ export default function CreatePost() {
 
       <div className="relative main-content top-24 px-10 mb-36">
         {/* Back button and Create Post text */}
-        <div className=" relative flex items-center mb-10 ml-40">
+        <div className=" relative flex justify-start items-center mb-10">
           <a href="/forum" className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
