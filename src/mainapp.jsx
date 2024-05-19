@@ -10,6 +10,7 @@ import Blog from "./components/blog.jsx";
 import BookAlert from "./components/bookalert.jsx";
 import CreatePost from "./components/createpost.jsx"; 
 import Booking from "./components/booking.jsx";
+import Subscribe from "./components/subscribe.jsx";
 
 export default function MainApp(){
     return(
@@ -25,6 +26,7 @@ export default function MainApp(){
             <Route path="/consultation/booking" element={<Booking />}/>
             <Route path="/blog" element={<Blog />}/>
             <Route path="/bookalert" element={<BookAlert />}/>
+            <Route path="/subscribe" element={<Subscribe />}/>
         </Routes>
         </>
         
