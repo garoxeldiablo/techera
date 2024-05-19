@@ -8,10 +8,8 @@ import EditProfile from "./components/editprofile.jsx";
 import Forum from "./components/forum.jsx";
 import Blog from "./components/blog.jsx";
 import BookAlert from "./components/bookalert.jsx";
-<<<<<<< Updated upstream
 import CreatePost from "./components/createpost.jsx"; 
-=======
->>>>>>> Stashed changes
+import Booking from "./components/booking.jsx";
 
 export default function MainApp(){
     return(
@@ -23,7 +21,8 @@ export default function MainApp(){
             <Route path="/clientarea" element={<ClientArea />}/>
             <Route path="/editprofile" element={<EditProfile />}/>
             <Route path="/forum" element={<Forum />}/>
-            <Route path="/createpost" element={<CreatePost />}/>
+            <Route path="/forum/createpost" element={<CreatePost />}/>
+            <Route path="/consultation/booking" element={<Booking />}/>
             <Route path="/blog" element={<Blog />}/>
             <Route path="/bookalert" element={<BookAlert />}/>
         </Routes>
