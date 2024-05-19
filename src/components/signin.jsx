@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -12,6 +12,28 @@ export function SignIn() {
   })
 
   const navigate = useNavigate();
+
+  // handle submit
+  const [input, setInput] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleSubmitEvent = (e) => {
+    e.preventDefault();
+    if (input.username !== "" && input.password !== "") {
+      //dispatch action from hooks
+    }
+    alert("please provide a valid input");
+  };
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   return (
     <div class="flex h-scree">
@@ -28,18 +50,23 @@ export function SignIn() {
               <h1 class="text-4xl font-semibold mb-6 bg-gradient-to-r from-blue-600 to-black inline-block text-transparent bg-clip-text">Welcome to techera.id</h1>
               <h1 class="text-md font-semibold mb-6 text-gray-500 text-center">Login to your account</h1>
             </div>
-          <form action="#" method="POST" class="space-y-4">
+
+          <form onSubmit={handleSubmitEvent} method="POST" class="space-y-4">
+
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-              <input type="text" id="email" name="email" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='shaela@example.com'/>
+              <input onChange={handleInput} type="text" id="email" name="email" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='shaela@example.com'/>
             </div>
+
             <div>
               <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-              <input type="password" id="password" name="password" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='enter your password'/>
+              <input onChange={handleInput} type="password" id="password" name="password" class="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='enter your password'/>
             </div>
+
             <div>
               <button onClick={()=> navigate('/clientarea')} type="submit" class="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Login</button>
             </div>
+
             <div class="mt-4 text-sm text-gray-600 text-center">
                 <p>or with this</p>
             </div>
@@ -61,6 +88,7 @@ export function SignIn() {
             </div>
           </div>
           </form>
+
           <div class="mt-4 text-sm text-gray-600 text-center">
             <p>No have an account? <button onClick={()=>navigate('/signup')} class="text-black hover:underline">create account</button>
             </p>
