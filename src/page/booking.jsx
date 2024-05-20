@@ -1,9 +1,16 @@
-import { Datepicker, Rating, RatingStar } from "flowbite-react"
+import { Rating, RatingStar } from "flowbite-react"
 import NavbarClient from "../components/navbarclient"
+import DateTimeInput from "../components/datetime"
+import Footer from "../components/footer"
+import Modal from "../components/bookmodal"
+import { useState } from "react"
 
 export default function Booking(){
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const today = new Date();
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <>
         <NavbarClient />
@@ -77,17 +84,115 @@ export default function Booking(){
             </div>
 
             {/* jadwal */}
-            <div className="flex mt-4 gap-x-4">
+            <div className="mt-4 gap-x-4">
                 <div>
                     <h3 className="text-2xl text-blue-800 mb-2">Atur jadwal</h3>
-                    <Datepicker defaultDate={today} minDate={today} maxDate={new Date(2024, 12, 30)} />
-                </div>
-                <div>
-                    <h3 className="text-2xl text-blue-800 mb-2">Atur jadwal</h3>
-                    <Datepicker defaultDate={today} minDate={today} maxDate={new Date(2024, 12, 30)} />
+                    <DateTimeInput/>
+                    <button onClick={openModal} className="md:ml-2 md:mt-8 px-3 py-2 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Pilih Rencana</button>
                 </div>
             </div>
+
+            {/* review */}
+            <div className="mt-4">
+                <div className="my-3">
+                    <h3 className="text-2xl text-blue-800 mb-2">Penilaian</h3>
+                    <div className="flex gap-x-2 items-center">
+                        <Rating size='lg'>
+                            <RatingStar/>
+                            <p className="ml-2 font-semibold text-gray-900 dark:text-white text-3xl">4.95</p>
+                        </Rating>
+                        <p className="ml-2 text-gray-500 dark:text-white text-xl">/ 5.0</p>
+                    </div>
+                </div>
+                <div className="container-review">
+                    {/* user review */}
+                    <div className="my-5" id="reviewuser">
+                        <div className="flex gap-x-2 items-center">
+                            <img
+                                className="h-8 w-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt=""
+                            />
+                            <p className='text-base text-blue-900 font-semibold'>Agus Bisana</p>
+                            <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
+                            <p className=" text-gray-500 dark:text-white text-sm">5bln lalu</p>
+                        </div>
+                        <div className="gap-x-2">
+                            <div className="flex items-center gap-x-2">
+                                <Rating>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar fill="false"/>
+                                </Rating>
+                                <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                            </div>
+                            <p className=" text-gray-500 dark:text-white text-sm">Mantap laptop dah ga ngelek lagi</p>
+                        </div>
+                    </div>
+                    {/* user review */}
+                    {/* user review */}
+                    <div className="my-5" id="reviewuser">
+                        <div className="flex gap-x-2 items-center">
+                            <img
+                                className="h-8 w-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt=""
+                            />
+                            <p className='text-base text-blue-900 font-semibold'>Agus Bisana</p>
+                            <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
+                            <p className=" text-gray-500 dark:text-white text-sm">5bln lalu</p>
+                        </div>
+                        <div className="gap-x-2">
+                            <div className="flex items-center gap-x-2">
+                                <Rating>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar fill="false"/>
+                                </Rating>
+                                <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                            </div>
+                            <p className=" text-gray-500 dark:text-white text-sm">Mantap laptop dah ga ngelek lagi</p>
+                        </div>
+                    </div>
+                    {/* user review */}
+                    {/* user review */}
+                    <div className="my-5" id="reviewuser">
+                        <div className="flex gap-x-2 items-center">
+                            <img
+                                className="h-8 w-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt=""
+                            />
+                            <p className='text-base text-blue-900 font-semibold'>Agus Bisana</p>
+                            <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
+                            <p className=" text-gray-500 dark:text-white text-sm">5bln lalu</p>
+                        </div>
+                        <div className="gap-x-2">
+                            <div className="flex items-center gap-x-2">
+                                <Rating>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar/>
+                                    <RatingStar fill="false"/>
+                                </Rating>
+                                <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                            </div>
+                            <p className=" text-gray-500 dark:text-white text-sm">Mantap laptop dah ga ngelek lagi</p>
+                        </div>
+                    </div>
+                    {/* user review */}
+                </div>
+            </div>
+
+            {/* modal */}
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
         </div>
+        <Footer/>
         </>
     )
 }

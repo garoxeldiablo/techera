@@ -10,7 +10,6 @@ import Blog from "./page/blog.jsx";
 import Booking from "./page/booking.jsx";
 
 
-import BookAlert from "./components/bookalert.jsx";
 import CreatePost from "./page/createpost.jsx"; 
 import Subscribe from "./components/subscribe.jsx";
 
@@ -27,7 +26,6 @@ export default function MainApp(){
             <Route path="/forum/createpost" element={<CreatePost />}/>
             <Route path="/consultation/booking" element={<Booking />}/>
             <Route path="/blog" element={<Blog />}/>
-            <Route path="/bookalert" element={<BookAlert />}/>
             <Route path="/subscribe" element={<Subscribe />}/>
         </Routes>
         </>
