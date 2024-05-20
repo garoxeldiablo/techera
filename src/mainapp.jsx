@@ -4,14 +4,14 @@ import { SignIn } from "./page/signin.jsx";
 import { SignUp } from "./page/signup.jsx";
 import Home from "./page/home.jsx";
 import ClientArea from "./page/clientarea.jsx";
-import EditProfile from "./page/editprofile.jsx";
+import EditProfile from "./components/editprofile.jsx";
 import Forum from "./page/forum.jsx";
 import Blog from "./page/blog.jsx";
 import Booking from "./page/booking.jsx";
 
 
 import BookAlert from "./components/bookalert.jsx";
-import CreatePost from "./components/createpost.jsx"; 
+import CreatePost from "./page/createpost.jsx"; 
 import Subscribe from "./components/subscribe.jsx";
 
 export default function MainApp(){

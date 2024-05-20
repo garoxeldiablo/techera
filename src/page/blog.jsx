@@ -1,4 +1,5 @@
 import BlogCardSlider from '../components/blogcardslider'
+import Footer from '../components/footer'
 import NavbarClient from '../components/navbarclient'
 
 const Blog = () => {
@@ -34,6 +35,8 @@ const Blog = () => {
             </div>
 
             <BlogCardSlider/>
+
+            <Footer/>
         </>
     )
 }
