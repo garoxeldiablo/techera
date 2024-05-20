@@ -1,5 +1,5 @@
 import { Datepicker, Rating, RatingStar } from "flowbite-react"
-import NavbarClient from "./navbarclient"
+import NavbarClient from "../components/navbarclient"
 
 export default function Booking(){
 

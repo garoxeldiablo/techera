@@ -1,4 +1,4 @@
-import NavbarClient from "./navbarclient";
+import NavbarClient from "../components/navbarclient";
 
 export default function EditProfile() {
   return (

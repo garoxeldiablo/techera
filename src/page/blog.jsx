@@ -1,5 +1,5 @@
-import BlogCardSlider from "./blogcardslider";
-import NavbarClient from "./navbarclient";
+import BlogCardSlider from '../components/blogcardslider'
+import NavbarClient from '../components/navbarclient'
 
 const Blog = () => {
     return (

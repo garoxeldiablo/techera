@@ -1,4 +1,4 @@
-import NavbarClient from "./navbarclient";
+import NavbarClient from "../components/navbarclient";
 import { Link } from "react-router-dom";
 
 export default function Forum() {

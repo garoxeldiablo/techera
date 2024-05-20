@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Carousel,Card,Rating,RatingStar, Accordion, AccordionContent, AccordionPanel, AccordionTitle } from 'flowbite-react'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import NavbarGuest from './navbarguest';
+import NavbarGuest from '../components/navbarguest';
 
 export default function Home() {
   useEffect(() => {
