@@ -44,6 +44,7 @@ export default function EditProfile() {
           />
           <button className="text-blue-800 underline mt-2">Change image</button>
         </div>
+        
         {/* Form */}
         <form className="space-y-5 relative max-w-4xl mx-auto p-8">
           <div className="name w-100">

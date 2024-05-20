@@ -9,6 +9,7 @@ export default {
   theme: {
     extend: {
       width: {
+        '50': '12rem',
         '100': '25.5rem',  // Custom width value (448px)
         '104': '30rem',  // Custom width value (480px)
         '128': '32rem', // Custom width value (512px)
