@@ -1,6 +1,9 @@
 import NavbarClient from "../components/navbarclient";
+import { useNavigate } from "react-router-dom";
 
 export default function EditProfile() {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Navbar */}
@@ -10,8 +13,8 @@ export default function EditProfile() {
         
         {/* Back button and Change Profile text */}
         <div className=" relative flex items-center mb-10 ml-40">
-          <a 
-          href="/clientarea"
+          <button 
+          onClick={() => navigate('/clientarea')}
           className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +30,7 @@ export default function EditProfile() {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-          </a>
+          </button>
           <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
             Change Profile
           </div>
