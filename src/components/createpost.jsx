@@ -1,11 +1,14 @@
 import NavbarClient from "./navbarclient";
+import { useNavigate } from 'react-router-dom';
+
+
+const navigate = useNavigate();
 
 export default function CreatePost() {
   return (
     <>
       <NavbarClient />
       <div className="relative main-content top-24 px-10 mb-40">
-        
         {/* Back button and Create Post text */}
         <div className=" relative flex justify-start items-center mb-10">
           <a href="/forum" className="text-blue-800 text-2xl mr-2">
@@ -139,13 +142,13 @@ export default function CreatePost() {
 
         {/* Post Button */}
         <div className="flex justify-end relative top-10 mr-52 mb-10">
-          <a
+          <button
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
-            href="/forum"
+            className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4" 
+            onClick={() => navigate("/forum")}
           >
-            Post
-          </a>
+            Send
+          </button>
         </div>
       </div>
 
@@ -207,7 +210,6 @@ export default function CreatePost() {
           </div>
         </div>
       </div>
-
     </>
   );
 }
