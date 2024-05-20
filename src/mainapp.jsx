@@ -4,7 +4,7 @@ import { SignIn } from "./page/signin.jsx";
 import { SignUp } from "./page/signup.jsx";
 import Home from "./page/home.jsx";
 import ClientArea from "./page/clientarea.jsx";
-import EditProfile from "./components/editprofile.jsx";
+import EditProfile from "./page/editprofile.jsx";
 import Forum from "./page/forum.jsx";
 import Blog from "./page/blog.jsx";
 import Booking from "./page/booking.jsx";

@@ -27,7 +27,7 @@ export default function Forum() {
                 Join our community to discuss about anything that bothers you.
                 Ask questions, share insights, and connect with like-minded
                 individuals. Explore diverse topics, get advice, and stay
-                updated on the latest discussions. It's your space to engage,
+                updated on the latest discussions. It is your space to engage,
                 learn, and connect.
               </p>
             </div>
@@ -42,25 +42,25 @@ export default function Forum() {
             <div className="relative mt-10">
               <button
                 type="button"
-                class="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
+                className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
               >
                 Software
               </button>
               <button
                 type="button"
-                class="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
+                className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
               >
                 Hardware
               </button>
               <button
                 type="button"
-                class="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
+                className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
               >
                 Network
               </button>
               <button
                 type="button"
-                class="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 text-xl"
+                className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 text-xl"
               >
                 Cyber Security
               </button>
@@ -68,25 +68,25 @@ export default function Forum() {
           </div>
 
           {/* Search Bar */}
-          <form class="relative flex items-center max-w-sm">
-            <label for="simple-search" class="sr-only">
+          <form className="relative flex items-center max-w-sm">
+            <label htmlFor="simple-search" className="sr-only">
               Search
             </label>
-            <div class="relative w-full">
+            <div className="relative w-full">
               <input
                 type="text"
                 id="simple-search"
-                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Speaker tidak berfungsi."
                 required
               />
             </div>
             <button
               type="submit"
-              class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-800 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="p-2.5 ms-2 text-sm font-medium text-white bg-blue-800 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               <svg
-                class="w-4 h-4"
+                className="w-4 h-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -94,13 +94,13 @@ export default function Forum() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
-              <span class="sr-only">Search</span>
+              <span className="sr-only">Search</span>
             </button>
           </form>
 
@@ -172,9 +172,9 @@ export default function Forum() {
                         <path
                           d="M26.5762 18.75C26.5762 19.413 26.3128 20.0489 25.8439 20.5178C25.3751 20.9866 24.7392 21.25 24.0762 21.25H9.07617L4.07617 26.25V6.25C4.07617 5.58696 4.33956 4.95107 4.8084 4.48223C5.27725 4.01339 5.91313 3.75 6.57617 3.75H24.0762C24.7392 3.75 25.3751 4.01339 25.8439 4.48223C26.3128 4.95107 26.5762 5.58696 26.5762 6.25V18.75Z"
                           stroke="#004AAB"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           strokeLinecap="round"
@@ -243,9 +243,9 @@ export default function Forum() {
                         <path
                           d="M26.5762 18.75C26.5762 19.413 26.3128 20.0489 25.8439 20.5178C25.3751 20.9866 24.7392 21.25 24.0762 21.25H9.07617L4.07617 26.25V6.25C4.07617 5.58696 4.33956 4.95107 4.8084 4.48223C5.27725 4.01339 5.91313 3.75 6.57617 3.75H24.0762C24.7392 3.75 25.3751 4.01339 25.8439 4.48223C26.3128 4.95107 26.5762 5.58696 26.5762 6.25V18.75Z"
                           stroke="#004AAB"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           strokeLinecap="round"
@@ -314,9 +314,9 @@ export default function Forum() {
                         <path
                           d="M26.5762 18.75C26.5762 19.413 26.3128 20.0489 25.8439 20.5178C25.3751 20.9866 24.7392 21.25 24.0762 21.25H9.07617L4.07617 26.25V6.25C4.07617 5.58696 4.33956 4.95107 4.8084 4.48223C5.27725 4.01339 5.91313 3.75 6.57617 3.75H24.0762C24.7392 3.75 25.3751 4.01339 25.8439 4.48223C26.3128 4.95107 26.5762 5.58696 26.5762 6.25V18.75Z"
                           stroke="#004AAB"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           strokeLinecap="round"
@@ -385,9 +385,9 @@ export default function Forum() {
                         <path
                           d="M26.5762 18.75C26.5762 19.413 26.3128 20.0489 25.8439 20.5178C25.3751 20.9866 24.7392 21.25 24.0762 21.25H9.07617L4.07617 26.25V6.25C4.07617 5.58696 4.33956 4.95107 4.8084 4.48223C5.27725 4.01339 5.91313 3.75 6.57617 3.75H24.0762C24.7392 3.75 25.3751 4.01339 25.8439 4.48223C26.3128 4.95107 26.5762 5.58696 26.5762 6.25V18.75Z"
                           stroke="#004AAB"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           strokeLinecap="round"
