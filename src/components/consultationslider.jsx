@@ -12,27 +12,21 @@ const ConsultationCardSlider = () => {
         },
         { 
             id: 2, 
-            name: 'Jovis Jocunda', 
+            name: 'Agus Bisana', 
             division: 'Software', 
-            imgSrc: '../src/assets/technician/me1.jpg' 
+            imgSrc: '../src/assets/technician/a.jpg' 
         },
         { 
             id: 3, 
-            name: 'Jovis Jocunda', 
+            name: 'Gideon Aji', 
             division: 'Software', 
-            imgSrc: '../src/assets/technician/me1.jpg' 
+            imgSrc: '../src/assets/technician/g.jpg' 
         },
         { 
             id: 4, 
-            name: 'Jovis Jocunda', 
+            name: 'Shaela', 
             division: 'Software', 
-            imgSrc: '../src/assets/technician/me1.jpg' 
-        },
-        { 
-            id: 5, 
-            name: 'Jovis Jocunda', 
-            division: 'Software', 
-            imgSrc: '../src/assets/technician/me1.jpg' 
+            imgSrc: '../src/assets/technician/s.jpg' 
         },
     ];
 
@@ -53,7 +47,7 @@ const ConsultationCardSlider = () => {
                     {cards.map((card) => (
                         <div key={card.id} className="w-[35%] flex-shrink-0 px-4">
                             <div className="flex gap-2 rounded-md border border-blue-800 mt-2 mb-3 shadow-md w-full">
-                                <img src={card.imgSrc} alt={card.name} className="w-28 mx-3 mt-3 mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
+                                <img src={card.imgSrc} alt={card.name} className="w-28 h-28 mx-3 mt-3 mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
                                 <div className="pr-20 py-3">
                                     <h2 className="font-bold text-lg whitespace-nowrap overflow-hidden overflow-ellipsis">{card.name}</h2>
                                     <p className="text-xs font-medium -mt-1 mb-2">{card.division}</p>

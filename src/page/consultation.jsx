@@ -1,11 +1,14 @@
 import ConsultationCardSlider from "../components/consultationslider";
+import Footer from "../components/footer";
 import NavbarClient from "../components/navbarclient";
 import { Rating,RatingStar } from "flowbite-react";
 
 export default function Consultation () {
     return <>
-        <NavbarClient/>
-
+        <div className="relative z-50">
+            <NavbarClient/>
+        </div>
+        
         <div className="w-full pt-24 px-56 bg-custom-bg bg-cover bg-center">
             <div className="absolute inset-0 bg-blue-800 bg-opacity-50 h-72 z-0 mt-3"></div>
 
@@ -96,7 +99,67 @@ export default function Consultation () {
         <ConsultationCardSlider/>
 
         <div className="mx-56 mt-10 mb-2">
-            <h1 className="font-bold text-blue-800 text-2xl">Order History</h1>
+            <h1 className="font-bold text-blue-800 text-2xl mb-6">Order History</h1>
+
+            <div className="border-b border-black mb-4">
+                <div className="flex justify-between mb-6">
+                    <div>
+                        <h2 className="font-bold text-xl">Jovis Jocunda</h2>
+                        <p>30 Januari 2024</p>
+                        <p>12.00</p>
+                    </div>
+
+                    <div>
+                        <h3>Rp. 999.999</h3>
+                        <button className="bg-blue-800 text-white text-xs rounded-md px-3 py-1 shadow-md">
+                            Order Again
+                        </button>
+                    </div>
+                </div>
+
+                <div className="mb-2">
+                    <h3 className="font-bold">Your Review:</h3>
+                    <Rating>
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    </Rating>
+                    <p>Pelayanan sangat bagus dan teknisinya sangat profesional dan ramah. Semua tahap ditunjukkan dan transparan. Keren memang techera, sukses selalu!!</p>
+                </div>
+            </div>
+
+            <div className="border-b border-black mb-4">
+                <div className="flex justify-between mb-6">
+                    <div>
+                        <h2 className="font-bold text-xl">Agus Bisana Putra</h2>
+                        <p>30 Februari 2024</p>
+                        <p>12.00</p>
+                    </div>
+
+                    <div>
+                        <h3>Rp. 900.999</h3>
+                        <button className="bg-blue-800 text-white text-xs rounded-md px-3 py-1 shadow-md">
+                            Order Again
+                        </button>
+                    </div>
+                </div>
+
+                <div className="mb-2">
+                    <h3 className="font-bold">Your Review:</h3>
+                    <Rating>
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    <RatingStar />
+                    </Rating>
+                    <p>MANTEP EMG BANG AGUS!! AMPUN PUHH</p>
+                </div>
+            </div>
         </div>
+
+        <Footer/>
     </>
 }
