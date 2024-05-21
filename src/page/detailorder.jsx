@@ -14,36 +14,36 @@ export default function DetailOrder(){
                     <div className="md:w-1/2 m-6">
                         <h3 className="text-2xl text-blue-800 mb-2">Order Item</h3>
                         <div className="h-1 bg-blue-700 w-full my-2"/>
-                        <div class="relative overflow-x-auto">
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <div className="relative overflow-x-auto">
+                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Produk
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Tanggal Pesan
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Harga
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Status Pembayaran
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             Live Chat
                                         </th>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             24-05-2024
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             Rp 20.000,00
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             Pending
                                         </td>
                                     </tr>
@@ -55,7 +55,7 @@ export default function DetailOrder(){
                     <div className="md:w-1/2 m-6">
                         <h3 className="text-2xl text-blue-800 mb-2">Teknisi</h3>
                         <div className="h-1 bg-blue-700 w-full my-2"/>
-                        <div class="relative md:flex flex-row-reverse overflow-x-auto justify-around items-center">
+                        <div className="relative md:flex flex-row-reverse overflow-x-auto justify-around items-center">
                             <div>
                                 <img
                                     className="Ellipse118 w-36 h-36 rounded-full border-4 border-blue-800 mt-5"
@@ -75,60 +75,60 @@ export default function DetailOrder(){
                 <div className="m-6">
                     <h3 className="text-2xl text-blue-800 mb-2">Transaksi</h3>
                     <div className="h-1 bg-blue-700 w-full my-2"/>
-                    <div class="relative overflow-x-auto">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <div className="relative overflow-x-auto">
+                        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         #Id
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Tanggal Pesan
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Tanggal Konsultasi
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Status
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Hasil
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Teknisi
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Harga
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Deskripsi
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         002212
                                     </th>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         18-05-2024
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         20-05-2024
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         Sukses
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         Selesai
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         Agus Bisana
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         Rp 20.000,00
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td className="px-6 py-4">
                                         Baterai bermasalah,
                                         silahkan perbaikan lebih
                                         lanjut di tempat servis

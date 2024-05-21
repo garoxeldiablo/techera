@@ -8,7 +8,7 @@ const navigation = [
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Forum', href: '/forum', current: false },
 ]
-  
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }

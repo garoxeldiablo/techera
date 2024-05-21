@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import ArrowRightIcon from '../assets/icon/arrow-r.png';
+import ArrowLeftIcon from '../assets/icon/Arrow.png';
 import { Rating, RatingStar } from 'flowbite-react';
+import { useNavigate } from "react-router-dom";
 
 const ConsultationCardSlider = () => {
+    const navigate = useNavigate();
+
     const cards = [
         { 
             id: 1, 
@@ -31,10 +35,14 @@ const ConsultationCardSlider = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 2; // Number of fully visible items
+    const itemsPerPage = 3;
+
+    const handlePrevClick = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - itemsPerPage : prevIndex - 1));
+    };
 
     const handleNextClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === cards.length - itemsPerPage ? 0 : prevIndex + 1));
     };
 
     return (
@@ -64,7 +72,7 @@ const ConsultationCardSlider = () => {
                                             Call
                                         </button>
 
-                                        <button className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
+                                        <button onClick={() => navigate('/consultation/booking')} className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
                                             Detail
                                         </button>
                                     </div>
@@ -76,10 +84,17 @@ const ConsultationCardSlider = () => {
             </div>
 
             <button
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 text-blue-800 bg-opacity-90"
+                className="absolute top-1/2 right-0 transform -translate-y-1/2"
                 onClick={handleNextClick}
             >
                 <img src={ArrowRightIcon} alt="Next" className="w-8 h-8" />
+            </button>
+
+            <button
+                className="absolute top-1/2 left-0 transform -translate-y-1/2"
+                onClick={handlePrevClick}
+            >
+                <img src={ArrowLeftIcon} alt="Previous" className="w-8 h-8" />
             </button>
         </div>
         </>

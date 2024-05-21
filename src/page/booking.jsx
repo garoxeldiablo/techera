@@ -4,8 +4,10 @@ import DateTimeInput from "../components/datetime";
 import Footer from "../components/footer";
 import Modal from "../components/bookmodal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Booking() {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -19,7 +21,7 @@ export default function Booking() {
         {/* Back button and Informasi Teknsii text */}
         <div className=" relative flex items-center mb-15 ml-40">
           <button
-            onClick={() => navigate("/forum")}
+            onClick={() => navigate("/consultation")}
             className="text-blue-800 text-2xl mr-2"
           >
             <svg
@@ -52,12 +54,12 @@ export default function Booking() {
             Jovis Jocunda
           </h2>
           <p className="text-gray-500 mt-2">Software</p>
-          <div class=" py-12 sm:py-12">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base leading-7 text-gray-600">Penilaian</dt>
-                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <div className=" py-12 sm:py-12">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt className="text-base leading-7 text-gray-600">Penilaian</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     <Rating size="lg">
                       <RatingStar />
                       <p className="ml-2 text-gray-900 dark:text-white">4.95</p>
@@ -65,17 +67,17 @@ export default function Booking() {
                     </Rating>
                   </dd>
                 </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base leading-7 text-gray-600">
+                <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt className="text-base leading-7 text-gray-600">
                     Penyelesaian
                   </dt>
-                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     103+
                   </dd>
                 </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base leading-7 text-gray-600">Pengalaman</dt>
-                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt className="text-base leading-7 text-gray-600">Pengalaman</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     2 Years
                   </dd>
                 </div>
