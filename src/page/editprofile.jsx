@@ -71,7 +71,7 @@ export default function EditProfile() {
                 type="email"
                 id="email"
                 className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
-                placeholder="aguspalingganteng@gmail.com"
+                placeholder="jovissepuhhacker@gmail.com"
               />
             </div>
             <div className="phone-number w-full">
