@@ -66,7 +66,7 @@ export default function NavbarClient(){
                         className="relative rounded-full bg-white p-1 text-gray-900 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                         >
                         <span className="absolute -inset-1.5" />
-                        <span className="sr-only">View notifications</span>
+                        <span className="sr-only">Lihat Notifikasi</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                         </button>
 
@@ -100,7 +100,7 @@ export default function NavbarClient(){
                                     href="/editprofile"
                                     className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                                 >
-                                    Your Profile
+                                    Profil Anda
                                 </a>
                                 )}
                             </Menu.Item>
@@ -110,7 +110,7 @@ export default function NavbarClient(){
                                     href="/signup"
                                     className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                                 >
-                                    Sign out
+                                    Keluar
                                 </a>
                                 )}
                             </Menu.Item>

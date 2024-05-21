@@ -1,4 +1,5 @@
 import NavbarClient from "../components/navbarclient";
+import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
 export default function CreatePost() {
@@ -8,8 +9,9 @@ export default function CreatePost() {
     <>
       <NavbarClient />
       <div className="relative main-content top-24 px-10 mb-40">
+        
         {/* Back button and Create Post text */}
-        <div className=" relative flex items-center mb-10 ml-40">
+        <div className=" relative flex items-center mb-15 ml-40">
           <button onClick={() => navigate('/forum')} className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,24 +29,24 @@ export default function CreatePost() {
             </svg>
           </button>
           <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
-            Create a Post
+            Buat Topik
           </div>
         </div>
 
         {/* Create Post */}
-        <div className="flex justify-center mt-24">
+        <div className="flex justify-center mt-16">
           <div className="w-full max-w-3xl border-2 border-blue-800 rounded-lg p-4">
             <label
               htmlFor="comment"
               className="block mb-2 text-sm font-medium text-gray-900"
             >
-              COMMENT
+              KOMEN
             </label>
             <textarea
               id="comment"
               rows="6"
               className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-              placeholder="What's in your thought?"
+              placeholder="Apa yang ingin anda bagikan?"
             ></textarea>
             <div className="flex mt-2 space-x-4 relative left-1">
               <button type="button" className="text-blue-800 font-bold text-xl">
@@ -103,7 +105,7 @@ export default function CreatePost() {
         <div className="flex justify-center mt-10">
           <div className="w-full max-w-3xl border-2 border-blue-800 rounded-lg p-4">
             <label className="block mb-2 text-sm font-medium text-black">
-              ADD IMAGES
+              TAMBAHKAN GAMBAR
             </label>
             <div className="flex space-x-4">
               <img
@@ -146,69 +148,15 @@ export default function CreatePost() {
             className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4" // Add ml-4 for left margin
             onClick={() => navigate("/forum")}
           >
-            Post
+            Unggah
           </button>
         </div>
       </div>
 
       {/* footer */}
-      <div className="max-h-svh bg-blue-800">
-        <div className="md:flex justify-between p-8">
-          <div>
-            <img className="h-10 rounded-lg" src="ss.png" alt="" />
-            <p className="text-white">segara@example.com</p>
-            <div className="flex gap-4 mt-10">
-              <svg
-                className="w-8"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1792 1792"
-                id="Google"
-              >
-                <path
-                  d="M896 786h725q12 67 12 128 0 217-91 387.5T1282.5 1568 896 1664q-157 0-299-60.5T352 1440t-163.5-245T128 896t60.5-299T352 352t245-163.5T896 128q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65T484 652.5 420 896t64 243.5T657.5 1316t238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78H896V786z"
-                  fill="#ffffff"
-                  className="color000000 svgShape"
-                ></path>
-              </svg>
-              <svg
-                className="w-8"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1792 1792"
-                id="Facebook"
-              >
-                <path
-                  d="M1376 128q119 0 203.5 84.5T1664 416v960q0 119-84.5 203.5T1376 1664h-188v-595h199l30-232h-229V689q0-56 23.5-84t91.5-28l122-1V369q-63-9-178-9-136 0-217.5 80T948 666v171H748v232h200v595H416q-119 0-203.5-84.5T128 1376V416q0-119 84.5-203.5T416 128h960z"
-                  fill="#ffffff"
-                  className="color000000 svgShape"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div>
-            <img
-              className="h-10 m-6"
-              src="../src/assets/logo/techera2.png"
-              alt=""
-            />
-            <h1 className="text-white font-semibold text-center">
-              A product of techera
-            </h1>
-          </div>
-          <div>
-            <h1 className="text-white font-semibold text-lg">Quick links</h1>
-            <a href="#">
-              <p className="text-white">Consultation</p>
-            </a>
-            <a href="#">
-              <p className="text-white">Remote</p>
-            </a>
-            <a href="#">
-              <p className="text-white">Blog</p>
-            </a>
-            <p className="text-white mt-10">2024 techera. All right reserved</p>
-          </div>
-        </div>
-      </div>
+      <Footer />
+      {/* Footer */}
+      
     </>
   );
 }

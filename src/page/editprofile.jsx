@@ -33,7 +33,7 @@ export default function EditProfile() {
             </svg>
           </button>
           <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
-            Change Profile
+            Profil Anda
           </div>
         </div>
 
@@ -46,14 +46,14 @@ export default function EditProfile() {
             className="Ellipse118 w-36 h-36 rounded-full border-4 border-blue-800 mt-5"
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           />
-          <button className="text-blue-800 underline mt-2">Change image</button>
+          <button className="text-blue-800 underline mt-2">Ganti gambar</button>
         </div>
         
         {/* Form */}
         <form className="space-y-5 relative max-w-4xl mx-auto p-8">
           <div className="name w-100">
             <label className="block mb-2 text-sm font-semibold text-black">
-              Name
+              Nama
             </label>
             <input
               type="text"
@@ -76,7 +76,7 @@ export default function EditProfile() {
             </div>
             <div className="phone-number w-full">
               <label className="block mb-2 text-sm font-semibold text-black">
-                Phone Number
+                Nomor Telepon
               </label>
               <input
                 type="text"
@@ -89,13 +89,13 @@ export default function EditProfile() {
           <div className="flex space-x-5">
             <div className="email w-full">
               <label className="block mb-2 text-sm font-semibold text-black">
-                Change Password
+                Ganti Kata Sandi
               </label>
               <input
                 type="password"
                 id="password"
                 className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
-                placeholder="Enter your current password"
+                placeholder="Masukkan kata sandi yang sekarang"
               />
             </div>
             <div className="phone-number w-full mt-7">
@@ -103,18 +103,18 @@ export default function EditProfile() {
                 type="password"
                 id="new-password"
                 className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"
-                placeholder="Enter your new password"
+                placeholder="Masukkan kata sandi yang baru"
               />
               <p
                 id="helper-text-explanation"
                 className="mt-2 text-gray-500 dark:text-gray-400 text-xs"
               >
-                Password must be at least{" "}
-                <span className="text-green-500">8 Characters</span> and must
-                contain at least{" "}
-                <span className="text-green-500">a Capital Letter</span>,{" "}
-                <span className="text-green-500">a Number</span> and{" "}
-                <span className="text-green-500">a Special Character</span>.
+                Kata sandi harus memuat setidaknya{" "}
+                <span className="text-green-500">8 karakter</span> 
+                harus memuat setidaknya{" "}
+                <span className="text-green-500">1 huruf kapital</span>,{" "}
+                <span className="text-green-500">1 angka</span> dan{" "}
+                <span className="text-green-500">1 karakter spesial</span>.
               </p>
             </div>
           </div>
@@ -125,15 +125,15 @@ export default function EditProfile() {
           <button
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/clientarea")}
           >
-            Save Changes
+            Simpan Perubahan
           </button>
           <button
             type="button"
-            className="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-xs px-1.5 py-2 me-2 mt-2"
+            className="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-xs px-3 py-2 me-2 mt-2"
           >
-            Delete Account
+            Hapus Akun
           </button>
         </div>
       </div>

@@ -25,12 +25,15 @@ export default function Home() {
           <div className="relative inline-flex items-center mx-auto align-middle">
             <div data-aos='fade-up' className="text-center">
               <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-blue-800 md:text-5xl lg:text-6xl lg:max-w-7xl">
-              Just connect to the internet, we will solve your computer problems.
+              Sambungkan ke internet, kami akan menyelesaikan masalah komputer Anda.
               </h1>
-              <p className="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Techera offers the ultimate solution to resolve all your software problems seamlessly.</p>
+              <p className="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Techera menawarkan solusi terbaik untuk menyelesaikan semua masalah komputer Anda dengan lancar
+              </p>
               <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                 <div className="mt-3 rounded-lg sm:mt-0">
-                  <button className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Get Started</button>
+                  <button className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Mulai
+                    </button>
                 </div>
               </div>
             </div>
@@ -87,9 +90,9 @@ export default function Home() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div data-aos='fade-right' className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Tentang Kami</h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-          Techera is an online service platform and consulting service that makes things easy for those of you who have computer problems, especially software and data management. Solve cases that often occur on computer devices such as application setup, disk management, driver installation, and Windows update troubleshooting.
+          Techera adalah platform layanan online dan layanan konsultasi yang memudahkan Anda yang memiliki masalah komputer, terutama perangkat lunak dan manajemen data. Kami menyelesaikan kasus-kasus yang sering terjadi pada perangkat komputer seperti pengaturan aplikasi, manajemen disk, instalasi driver, dan masalah pembaruan Windows.
           </p>
         </div>
       </div>
@@ -99,8 +102,9 @@ export default function Home() {
     {/* card */}
     <div className='my-32'>
     <div className='text-center'>
-      <h1 className='text-4xl text-blue-800 font-semibold my-2'>Why Techera?</h1>
-      <p className='text-gray-500'>Techera is a reliable technology partner that can efficiently resolve all your computer-related issues.</p>
+      <h1 className='text-4xl text-blue-800 font-semibold my-2'>Mengapa Techera?</h1>
+      <p className='text-gray-500'>Techera adalah mitra teknologi yang andal yang dapat secara efisien menyelesaikan semua masalah terkait komputer Anda.
+      </p>
     </div>
     <div className='gap-x-4 justify-center my-14 mx-9 md:flex'>
     <Card
@@ -114,7 +118,7 @@ export default function Home() {
       Live Chat
       </h5>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-      Communicate easily with our technician
+      Berkomunikasi dengan mudah dengan teknisi kami
       </p>
     </Card>
     <Card
@@ -128,7 +132,7 @@ export default function Home() {
       Ratings
       </h5>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-      Professional Technicians with great qualifications and rating
+      Teknisi profesional dengan kualifikasi dan peringkat yang hebat
       </p>
     </Card>
     <Card
@@ -143,7 +147,7 @@ export default function Home() {
       Reference
       </h5>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-      Find many safe reference web
+      Temukan banyak referensi bacaan yang kredibel
       </p>
     </Card>
     <Card
@@ -157,7 +161,7 @@ export default function Home() {
       Remote
       </h5>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-      Fixing your computer from distance
+      Memperbaiki komputer Anda dari jarak jauh
       </p>
     </Card>
     </div>
@@ -167,8 +171,8 @@ export default function Home() {
     {/* technician */}
     <div className='my-32 py-8'>
     <div className='text-center'>
-      <h1 className='text-4xl text-blue-800 font-semibold my-2'>Our Technician</h1>
-      <p className='text-gray-500'>Experienced technicians who have successfully resolved many computer problems</p>
+      <h1 className='text-4xl text-blue-800 font-semibold my-2'>Teknisi Kami</h1>
+      <p className='text-gray-500'>Teknisi berpengalaman yang telah berhasil menyelesaikan banyak masalah komputer</p>
     </div>
     <div className='md:flex justify-center md:mt-4'>
       <div className='gap-x-4 justify-center mx-9 md:flex'>
@@ -261,35 +265,35 @@ export default function Home() {
       <div className='md:flex justify-center p-6'>
         <div className='max-w-md mb-4'>
           <h1 className='text-4xl text-blue-800 font-semibold my-2'>Frequently Asked Questions</h1>
-          <p className='text-gray-500'>Here are our frequently asked questions for quick solutions to common inquiries.</p>
+          <p className='text-gray-500 mb-7'>Berikut adalah pertanyaan yang sering diajukan untuk solusi cepat terhadap pertanyaan umum.</p>
           <p className="mb-2 text-gray-700 dark:text-gray-400 font-bold">
-                Have other question?
+          Punya pertanyaan lain?
           </p>
-          <button className='p-2 bg-blue-800 text-white w-36 rounded-md'>Ask more</button>
+          <button className='p-2 bg-blue-800 text-white w-36 rounded-md'>Tanyakan</button>
         </div>
         <div className='max-w-sm'>
           <Accordion>
             <AccordionPanel>
-              <AccordionTitle>What is techera?</AccordionTitle>
+              <AccordionTitle>Apa itu Techera?</AccordionTitle>
               <AccordionContent>
                 <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Techera is an online consultation and service platform that provides convenience for those who have computer problems, especially software and data management. Solve cases that often occur on computer devices such as application setup, disk management, driver installation, and Windows update troubleshooting.
+                Techera adalah platform layanan online dan layanan konsultasi yang memudahkan Anda yang memiliki masalah komputer, terutama perangkat lunak dan manajemen data. Kami menyelesaikan kasus-kasus yang sering terjadi pada perangkat komputer seperti pengaturan aplikasi, manajemen disk, instalasi driver, dan masalah pembaruan Windows.
                 </p>
               </AccordionContent>
             </AccordionPanel>
             <AccordionPanel>
-              <AccordionTitle>techera comes from?</AccordionTitle>
+              <AccordionTitle>Bagaimana cara menemukan teknisi dengan rating tinggi?</AccordionTitle>
               <AccordionContent>
                 <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Techera was founded by a group of Infinite Learning students, namely Segara Samudra.
+                Cukup pergi ke bagian detail profil teknisi dan Anda akan menemukan rating dari teknisi tersebut.
                 </p>
               </AccordionContent>
             </AccordionPanel>
             <AccordionPanel>
-              <AccordionTitle>How to use Techera features?</AccordionTitle>
+              <AccordionTitle>Apa saja metode pembayaran yang tersedia di Techera?</AccordionTitle>
               <AccordionContent>
                 <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Currently the Techera feature is not yet available and is in the development stage
+                Terdapat metode pembayaran yang tersedia, seperti Kartu Debit, Gopay, Dana dan Qris.
                 </p>
               </AccordionContent>
             </AccordionPanel>

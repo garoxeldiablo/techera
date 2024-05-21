@@ -18,17 +18,13 @@ export default function Forum() {
           <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-sky-950 opacity-70"></div>
           <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
-            <div className="relative">
-              <h2 className="relative text-white text-4xl font-bold right-96 mb-4">
-                Welcome to <br />
-                Our Forum!
+            <div className="relative px-40">
+              <h2 className="text-white text-4xl font-bold mb-4 text-justify">
+                Selamat datang di <br />
+                Forum Kami!
               </h2>
-              <p className="desc text-white text-justify px-40">
-                Join our community to discuss about anything that bothers you.
-                Ask questions, share insights, and connect with like-minded
-                individuals. Explore diverse topics, get advice, and stay
-                updated on the latest discussions. It is your space to engage,
-                learn, and connect.
+              <p className="desc text-white text-justify">
+              Bergabunglah dengan forum kami untuk berdiskusi tentang apapun. Ajukan pertanyaan, bagikan wawasan, dan terhubung dengan individu yang memiliki minat yang sama. Jelajahi berbagai topik, dapatkan saran, dan tetap terinformasi tentang diskusi terbaru.
               </p>
             </div>
           </div>
@@ -37,7 +33,7 @@ export default function Forum() {
         <div className="px-44">
           {/* Category */}
           <div className="relative my-10 mx-auto">
-            <h2 className="text-blue-800 text-3xl font-bold">Category</h2>
+            <h2 className="text-blue-800 text-3xl font-bold">Kategori</h2>
 
             <div className="relative mt-10">
               <button
@@ -56,13 +52,13 @@ export default function Forum() {
                 type="button"
                 className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 mr-6 text-xl"
               >
-                Network
+                Jaringan
               </button>
               <button
                 type="button"
                 className="text-blue-800 bg-white border border-blue-800 hover:bg-gray-100 font-normal rounded-lg w-52 h-12 mb-2 text-xl"
               >
-                Cyber Security
+                Perangkat
               </button>
             </div>
           </div>
@@ -70,7 +66,7 @@ export default function Forum() {
           {/* Search Bar */}
           <form className="relative flex items-center max-w-sm">
             <label htmlFor="simple-search" className="sr-only">
-              Search
+              Cari
             </label>
             <div className="relative w-full">
               <input
@@ -100,7 +96,7 @@ export default function Forum() {
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
-              <span className="sr-only">Search</span>
+              <span className="sr-only">Cari</span>
             </button>
           </form>
 
@@ -108,13 +104,12 @@ export default function Forum() {
           <div className="my-10 flex justify-between items-center mx-auto">
             <div className="flex">
               <button className="text-blue-800 font-bold mr-5">
-                Popular Topics
+                Topik Populer
               </button>
-              <button className="text-neutral-600 mr-5">Latest Topics</button>
+              <button className="text-neutral-600 mr-5">Topik Terbaru</button>
             </div>
-            <Link to="createpost"
-            className="text-blue-800">
-              Create Post +
+            <Link to="createpost" className="text-blue-800">
+              Buat Topik +
             </Link>
           </div>
 
@@ -407,7 +402,7 @@ export default function Forum() {
       </div>
 
       {/* footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 }
