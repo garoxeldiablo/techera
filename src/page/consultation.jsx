@@ -1,3 +1,4 @@
+import ConsultationCardSlider from "../components/consultationslider";
 import NavbarClient from "../components/navbarclient";
 import { Rating,RatingStar } from "flowbite-react";
 
@@ -88,10 +89,14 @@ export default function Consultation () {
             </div>
         </div>
 
-        <div className="mx-56 mt-10 mb-6">
-            <h1 className="font-bold text-blue-800 text-2xl mb-4">Our Technician</h1>
+        <div className="mx-56 mt-10 mb-2">
+            <h1 className="font-bold text-blue-800 text-2xl">Our Technician</h1>
+        </div>
 
-            
+        <ConsultationCardSlider/>
+
+        <div className="mx-56 mt-10 mb-2">
+            <h1 className="font-bold text-blue-800 text-2xl">Order History</h1>
         </div>
     </>
 }
