@@ -12,6 +12,7 @@ import Booking from "./page/booking.jsx";
 
 import CreatePost from "./page/createpost.jsx"; 
 import Subscribe from "./components/subscribe.jsx";
+import Consultation from "./page/consultation.jsx";
 
 export default function MainApp(){
     return(
@@ -24,6 +25,7 @@ export default function MainApp(){
             <Route path="/editprofile" element={<EditProfile />}/>
             <Route path="/forum" element={<Forum />}/>
             <Route path="/forum/createpost" element={<CreatePost />}/>
+            <Route path="/consultation" element={<Consultation />}/>
             <Route path="/consultation/booking" element={<Booking />}/>
             <Route path="/blog" element={<Blog />}/>
             <Route path="/subscribe" element={<Subscribe />}/>

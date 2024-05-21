@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'Consultation', href: '#', current: false },
+    { name: 'Consultation', href: '/consultation', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Forum', href: '/forum', current: false },
 ]
