@@ -5,7 +5,7 @@ const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="md:fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <section class="bg-white dark:bg-gray-900 rounded-md">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             
@@ -105,7 +105,7 @@ const Modal = ({ isOpen, onClose }) => {
                 </div>
             </div>
             <div className='flex justify-center'>
-                <button onClick={onClose} className="mt-3 bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancel</button>
+                <button onClick={onClose} className="mt-3 border-b-2 border-white hover:border-gray-600 text-gray-600 px-4 py-2 mr-2">Cancel</button>
             </div>
         </div>
         </section>

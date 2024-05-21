@@ -8,6 +8,7 @@ const navigation = [
     { name: 'Consultation', href: '/consultation', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Forum', href: '/forum', current: false },
+    { name: 'Cart', href: '/cart', current: false },
 ]
   
 function classNames(...classes) {
@@ -17,7 +18,7 @@ function classNames(...classes) {
 export default function NavbarClient(){
     return(
         <>
-            <Disclosure as="nav" className="bg-white shadow-md fixed z-10 w-full">
+            <Disclosure as="nav" className="bg-white shadow-md fixed z-10 w-full top-0">
             {({ open }) => (
                 <>
                 <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -81,7 +82,7 @@ export default function NavbarClient(){
                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                 alt=""
                             />
-                            <p className='text-base text-blue-900 mx-2 font-semibold'>Agus Bisana</p>
+                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>Agus Bisana</p>
                             </Menu.Button>
                         </div>
                         <Transition

@@ -12,7 +12,7 @@ export default function Footer () {
                 </div>
                 <div>
                     <img className='h-10 m-6' src="../src/assets/logo/techera2.png" alt="" />
-                    <h1 className='text-white font-semibold text-center'>A product of techera</h1>
+                    <h1 className='text-white font-semibold md:text-center'>A product of techera</h1>
                 </div>
                 <div>
                 <h1 className='text-white font-semibold text-lg'>Quick links</h1>

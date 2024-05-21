@@ -4,7 +4,8 @@ import NavbarClient from "../components/navbarclient";
 import { Rating,RatingStar } from "flowbite-react";
 
 export default function Consultation () {
-    return <>
+    return (
+    <>
         <div className="relative z-50">
             <NavbarClient/>
         </div>
@@ -162,4 +163,5 @@ export default function Consultation () {
 
         <Footer/>
     </>
+    )
 }

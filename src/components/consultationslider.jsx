@@ -38,6 +38,7 @@ const ConsultationCardSlider = () => {
     };
 
     return (
+        <>
         <div className="relative mx-52">
             <div className="overflow-hidden">
                 <div
@@ -81,6 +82,8 @@ const ConsultationCardSlider = () => {
                 <img src={ArrowRightIcon} alt="Next" className="w-8 h-8" />
             </button>
         </div>
+        </>
+        
     );
 };
 
