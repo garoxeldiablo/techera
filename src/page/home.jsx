@@ -4,6 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import NavbarGuest from '../components/navbarguest';
 import Footer from '../components/footer';
+import CardTechnician from '../components/cardtechnician';
 
 export default function Home() {
   useEffect(() => {
@@ -122,7 +123,7 @@ export default function Home() {
       </p>
     </Card>
     <Card
-      className="md:w-1/4 m-4 hover:shadow-lg"
+      className="md:w-1/4 m-4 hover:shadow-lg bg-white"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-36 text-blue-800">
         <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
@@ -176,86 +177,14 @@ export default function Home() {
     </div>
     <div className='md:flex justify-center md:mt-4'>
       <div className='gap-x-4 justify-center mx-9 md:flex'>
-      <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="../src/assets/technician/me1.jpg" horizontal>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Jovis
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-          Software
-          </p>
-          <Rating>
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar filled={false} />
-          </Rating>
-          <div className='flex gap-x-2'>
-            <button className='p-2 bg-blue-800 text-white w-20 rounded-md'>Call</button>
-            <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
-          </div>
-        </Card>
-        <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="../src/assets/technician/a.jpg" horizontal>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Agus Bisana
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-          Hardware
-          </p>
-          <Rating>
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar filled={false} />
-          </Rating>
-          <div className='flex gap-x-2'>
-            <button className='p-2 bg-blue-800 text-white w-20 rounded-md'>Call</button>
-            <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
-          </div>
-        </Card>
+          <CardTechnician/>
+          <CardTechnician/>
       </div>
     </div>
     <div className='md:flex justify-center md:mt-4'>
       <div className='gap-x-4 justify-center mx-9 md:flex'>
-      <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="../src/assets/technician/g.jpg" horizontal>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Gideon Aji
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-          Network
-          </p>
-          <Rating>
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar filled={false} />
-          </Rating>
-          <div className='flex gap-x-2'>
-            <button className='p-2 bg-blue-800 text-white w-20 rounded-md'>Call</button>
-            <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
-          </div>
-        </Card>
-        <Card className="max-w-sm m-4 border-4 border-blue-800" imgSrc="../src/assets/technician/s.jpg" horizontal>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Shaela
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-          Cyber Security
-          </p>
-          <Rating>
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar />
-          <RatingStar filled={false} />
-          </Rating>
-          <div className='flex gap-x-2'>
-            <button className='p-2 bg-blue-800 text-white w-20 rounded-md'>Call</button>
-            <button className='p-2 bg-blue-600 text-white w-20 rounded-md'>Detail</button>
-          </div>
-        </Card>
+        <CardTechnician/>
+        <CardTechnician/>
       </div>
     </div>
     </div>

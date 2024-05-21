@@ -10,9 +10,11 @@ import Blog from "./page/blog.jsx";
 import Booking from "./page/booking.jsx";
 import DetailOrder from "./page/detailorder.jsx";
 import CreatePost from "./page/createpost.jsx"; 
+import Consultation from "./page/consultation.jsx";
+
 
 import Subscribe from "./components/subscribe.jsx";
-import Consultation from "./page/consultation.jsx";
+import CardTechnician from "./components/cardtechnician.jsx";
 
 export default function MainApp(){
     return(
@@ -30,6 +32,7 @@ export default function MainApp(){
             <Route path="/blog" element={<Blog />}/>
             <Route path="/cart" element={<DetailOrder />}/>
             <Route path="/subscribe" element={<Subscribe />}/>
+            <Route path="/cardt" element={<CardTechnician />}/>
         </Routes>
         </>
         
