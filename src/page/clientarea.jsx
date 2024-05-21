@@ -20,17 +20,17 @@ export default function ClientArea() {
 
     {/* hero */}
     <section>
-      <div class="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
-        <div class="flex w-full mx-auto text-left">
-          <div class="relative inline-flex items-center mx-auto align-middle">
-            <div data-aos='fade-up' class="text-center">
-              <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-blue-800 md:text-5xl lg:text-6xl lg:max-w-7xl">
+      <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
+        <div className="flex w-full mx-auto text-left">
+          <div className="relative inline-flex items-center mx-auto align-middle">
+            <div data-aos='fade-up' className="text-center">
+              <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-blue-800 md:text-5xl lg:text-6xl lg:max-w-7xl">
               Just connect to the internet, we will solve your computer problems.
               </h1>
-              <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Techera offers the ultimate solution to resolve all your software problems seamlessly.</p>
-              <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
-                <div class="mt-3 rounded-lg sm:mt-0">
-                  <button class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Get Started</button>
+              <p className="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Techera offers the ultimate solution to resolve all your software problems seamlessly.</p>
+              <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                <div className="mt-3 rounded-lg sm:mt-0">
+                  <button className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Get Started</button>
                 </div>
               </div>
             </div>
