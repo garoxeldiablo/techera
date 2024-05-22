@@ -36,7 +36,7 @@ export function SignIn() {
   };
 
   return (
-    <div className="flex h-scree">
+    <div className="flex h-screen">
       <div className="w-2/5 hidden items-center justify-center lg:flex bg-blue-700 text-black">
         <img className="h-screen object-none opacity-50" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
       </div>

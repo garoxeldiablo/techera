@@ -110,7 +110,7 @@ export default function EditProfile() {
                 className="mt-2 text-gray-500 dark:text-gray-400 text-xs"
               >
                 Kata sandi harus memuat setidaknya{" "}
-                <span className="text-green-500">8 karakter</span> 
+                <span className="text-green-500">8 karakter </span> 
                 harus memuat setidaknya{" "}
                 <span className="text-green-500">1 huruf kapital</span>,{" "}
                 <span className="text-green-500">1 angka</span> dan{" "}
