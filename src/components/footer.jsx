@@ -3,7 +3,7 @@ export default function Footer () {
         <div className='max-h-svh bg-blue-800'>
             <div className='md:flex justify-between p-8'>
                 <div>
-                    <img className='h-10 rounded-lg' src="ss.png" alt="" />
+                    <img className='w-20 rounded-lg' src="ss.png" alt="" />
                     <p className='text-white'>email@barunamuda.com</p>
                     <div className='flex gap-4 mt-10'>
                     <svg className='w-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Google"><path d="M896 786h725q12 67 12 128 0 217-91 387.5T1282.5 1568 896 1664q-157 0-299-60.5T352 1440t-163.5-245T128 896t60.5-299T352 352t245-163.5T896 128q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65T484 652.5 420 896t64 243.5T657.5 1316t238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78H896V786z" fill="#ffffff" className="color000000 svgShape"></path></svg>
@@ -11,8 +11,7 @@ export default function Footer () {
                     </div>
                 </div>
                 <div>
-                    <img className='h-10 m-6' src="../src/assets/logo/techera2.png" alt="" />
-                    <h1 className='text-white font-semibold md:text-center'>A product of techera</h1>
+                    <img className='w-36 my-2 bg-white py-2 rounded-md' src="../src/assets/logo/logo2.png" alt="" />
                 </div>
                 <div>
                 <h1 className='text-white font-semibold text-lg'>Quick links</h1>

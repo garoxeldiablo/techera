@@ -1,7 +1,6 @@
 import NavbarClient from "../components/navbarclient";
-import { Card } from "flowbite-react";
-import { Rating, RatingStar } from "flowbite-react";
 import Footer from "../components/footer";
+import ActiveFeature from "../components/activefeature";
 
 export default function DetailOrder(){
     return(
@@ -15,8 +14,8 @@ export default function DetailOrder(){
                         <h3 className="text-2xl text-blue-800 mb-2">Order Item</h3>
                         <div className="h-1 bg-blue-700 w-full my-2"/>
                         <div className="relative overflow-x-auto">
-                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                                     <tr>
                                         <th scope="col" className="px-6 py-3">
                                             Produk
@@ -33,8 +32,8 @@ export default function DetailOrder(){
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <tr className="bg-white border-b ">
+                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             Live Chat
                                         </th>
                                         <td className="px-6 py-4">
@@ -76,8 +75,8 @@ export default function DetailOrder(){
                     <h3 className="text-2xl text-blue-800 mb-2">Transaksi</h3>
                     <div className="h-1 bg-blue-700 w-full my-2"/>
                     <div className="relative overflow-x-auto">
-                        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
                                     <th scope="col" className="px-6 py-3">
                                         #Id
@@ -106,8 +105,8 @@ export default function DetailOrder(){
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <tr className="bg-white border-b">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                         002212
                                     </th>
                                     <td className="px-6 py-4">
@@ -147,24 +146,7 @@ export default function DetailOrder(){
                         <div>
                             <div className='md:mt-4 md:flex justify-between'>
                                 <div className='gap-x-4'>
-                                    <Card className="max-w-sm border-4 border-blue-800" imgSrc="../src/assets/technician/a.jpg" horizontal>
-                                        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Agus Bisana
-                                        </h5>
-                                        <p className="font-normal text-gray-700 dark:text-gray-400">
-                                        Hardware
-                                        </p>
-                                        <Rating>
-                                        <RatingStar />
-                                        <RatingStar />
-                                        <RatingStar />
-                                        <RatingStar />
-                                        <RatingStar filled={false} />
-                                        </Rating>
-                                        <div className='gap-x-2'>
-                                            <button className='p-2 bg-blue-800 text-white rounded-md'>Live Chat</button>
-                                        </div>
-                                    </Card>
+                                    <ActiveFeature/>
                                 </div>
                                 <div>
                                     <div>
