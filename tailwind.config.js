@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 /** @type {import('flowbite-react').Config} */
 export default {
-  darkMode: false,
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

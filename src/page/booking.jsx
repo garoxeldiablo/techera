@@ -62,7 +62,7 @@ export default function Booking() {
                   <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     <Rating size="lg">
                       <RatingStar />
-                      <p className="ml-2 text-gray-900 dark:text-white">4.95</p>
+                      <p className="ml-2 text-gray-700">4.95</p>
                       <span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
                     </Rating>
                   </dd>
@@ -71,13 +71,13 @@ export default function Booking() {
                   <dt className="text-base leading-7 text-gray-600">
                     Penyelesaian
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-700 sm:text-5xl">
                     103+
                   </dd>
                 </div>
                 <div className="mx-auto flex max-w-xs flex-col gap-y-4">
                   <dt className="text-base leading-7 text-gray-600">Pengalaman</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-700 sm:text-5xl">
                     2 Years
                   </dd>
                 </div>
