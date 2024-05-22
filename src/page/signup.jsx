@@ -45,7 +45,7 @@ export function SignUp() {
                 className="mt-2 text-gray-500 dark:text-gray-400 text-xs"
               >
                 Kata sandi harus memuat setidaknya{" "}
-                <span className="text-green-500">8 karakter</span> 
+                <span className="text-green-500">8 karakter </span> 
                 harus memuat setidaknya{" "}
                 <span className="text-green-500">1 huruf kapital</span>,{" "}
                 <span className="text-green-500">1 angka</span> dan{" "}
@@ -53,7 +53,7 @@ export function SignUp() {
               </p>
             </div>
             <div>
-              <button type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Buat Akun</button>
+              <button type="submit" onClick={() => navigate('/signin')} className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Buat Akun</button>
             </div>
             <div className="mt-4 text-sm text-gray-600 text-center">
                 <p>atau dengan ini</p>

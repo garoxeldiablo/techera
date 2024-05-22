@@ -10,14 +10,26 @@ export default function Consultation () {
             <NavbarClient/>
         </div>
         
-        <div className="w-full pt-24 px-56 bg-custom-bg bg-cover bg-center">
-            <div className="absolute inset-0 bg-blue-800 bg-opacity-50 h-72 z-0 mt-3"></div>
-
-            <div className="relative z-10">
-                <h1 className="block font-bold text-4xl pb-2 text-white">Consult Your</h1>
-                <h1 className="block font-bold text-4xl pb-4 text-white">Computer Problem</h1>
-                <p className="pb-7 text-white">Welcome to the consultation page, where our experts are dedicated to providing tailored solutions to address your technical challenges and optimize your computing experience. Whether it is troubleshooting hardware issues, resolving software glitches, or optimizing system performance, our dedicated team of experts is here to assist you every step of the way.</p>
+        <div className="pt-24 mb-20">
+        <div className="relative w-full h-64">
+          <img
+            className="h-full w-full object-cover"
+            src="src/assets/content/consultation-hero.jpg"
+            alt="Random image"
+          />
+          <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-sky-950 opacity-70"></div>
+          <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
+            <div className="relative px-40">
+              <h2 className="text-white text-4xl font-bold mb-4 text-justify">
+                Konsultasikan <br />
+                Masalahmu!
+              </h2>
+              <p className="desc text-white text-justify">
+              Selamat datang di konsultasi, di mana para ahli akan memberikan solusi dari tantangan teknis Anda dan mengoptimalkan pengalaman komputasi Anda baik itu pemecahan masalah perangkat keras, mengatasi gangguan perangkat lunak, atau mengoptimalkan kinerja sistem. Tim ahli kami yang berdedikasi siap membantu Anda di setiap langkah.</p>
             </div>
+          </div>
+        </div>
         </div>
 
         <div className="mt-6 w-full flex justify-center">
@@ -25,18 +37,18 @@ export default function Consultation () {
                 <input 
                     type="text" 
                     className="flex-grow p-3 border border-blue-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-800 text-xl" 
-                    placeholder="What do you need?">
+                    placeholder="Apa yang Anda butuhkan?">
                 </input>
                 <button 
                     type="submit" 
                     className="p-3 bg-blue-800 border border-blue-800 text-white rounded-r-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-800 text-xl">
-                    Search
+                    Cari
                 </button>
             </form>
         </div>
 
         <div className="mt-5 mx-56 border-2 border-blue-800 rounded-md shadow-md">
-            <h2 className="border-b-2 border-blue-800 pt-2 pl-3 pb-1 font-semibold text-blue-800 text-lg">Active Feature</h2>
+            <h2 className="border-b-2 border-blue-800 pt-2 pl-3 pb-1 font-semibold text-blue-800 text-lg">Jadwal Anda</h2>
 
             <div className="flex justify-between">
                 <div className="flex gap-2 bg-gray-200 rounded-md border border-blue-800 mt-2 mb-3 ml-3 shadow-md">
@@ -52,7 +64,7 @@ export default function Consultation () {
                         <RatingStar filled={false} />
                         </Rating>
                         <button className="text-xs bg-blue-800 text-white px-4 py-0.5 rounded-md shadow-md mt-2">
-                            Live Chat
+                            Chat
                         </button>
                     </div>
                 </div>
@@ -72,7 +84,7 @@ export default function Consultation () {
         </div>
 
         <div className="mx-56 mt-6 mb-6">
-            <h1 className="text-2xl text-blue-800 font-bold mb-4">Category</h1>
+            <h1 className="text-2xl text-blue-800 font-bold mb-4">Kategori</h1>
 
             <div className="flex justify-between gap-6">
                 <button className="border border-blue-800 shadow-md text-blue-800 px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-lg">
@@ -94,13 +106,13 @@ export default function Consultation () {
         </div>
 
         <div className="mx-56 mt-10 mb-2">
-            <h1 className="font-bold text-blue-800 text-2xl">Our Technician</h1>
+            <h1 className="font-bold text-blue-800 text-2xl">Teknisi Kami</h1>
         </div>
 
         <ConsultationCardSlider/>
 
         <div className="mx-56 mt-10 mb-2">
-            <h1 className="font-bold text-blue-800 text-2xl mb-6">Order History</h1>
+            <h1 className="font-bold text-blue-800 text-2xl mb-6">Riwayat Pemesanan</h1>
 
             <div className="border-b border-black mb-4">
                 <div className="flex justify-between mb-6">
@@ -113,13 +125,13 @@ export default function Consultation () {
                     <div>
                         <h3>Rp. 999.999</h3>
                         <button className="bg-blue-800 text-white text-xs rounded-md px-3 py-1 shadow-md">
-                            Order Again
+                            Pesan Lagi
                         </button>
                     </div>
                 </div>
 
                 <div className="mb-2">
-                    <h3 className="font-bold">Your Review:</h3>
+                    <h3 className="font-bold">Ulasan Anda:</h3>
                     <Rating>
                     <RatingStar />
                     <RatingStar />
@@ -142,13 +154,13 @@ export default function Consultation () {
                     <div>
                         <h3>Rp. 900.999</h3>
                         <button className="bg-blue-800 text-white text-xs rounded-md px-3 py-1 shadow-md">
-                            Order Again
+                            Pesan Lagi
                         </button>
                     </div>
                 </div>
 
                 <div className="mb-2">
-                    <h3 className="font-bold">Your Review:</h3>
+                    <h3 className="font-bold">Ulasan Anda:</h3>
                     <Rating>
                     <RatingStar />
                     <RatingStar />
