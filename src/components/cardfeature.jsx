@@ -1,4 +1,14 @@
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 export default function CardFeature(){
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            once: true
+        })
+      })
     return (
         <>
         <div className='my-32'>
@@ -8,7 +18,7 @@ export default function CardFeature(){
                 </p>
             </div>
             <div className='gap-x-4 justify-center my-14 mx-9 md:flex'>
-                <div class="md:w-1/5 mb-2 bg-white border border-gray-200 rounded-lg shadow">
+                <div data-aos='fade-up' class="md:w-1/5 mb-2 bg-white border border-gray-200 rounded-lg shadow">
                     <div class="px-5 pb-5 text-center">
                         <div className="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-36 text-blue-800">
@@ -24,7 +34,7 @@ export default function CardFeature(){
                         </p>
                     </div>
                 </div>
-                <div class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+                <div data-aos='fade-up' data-aos-delay='100' class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div class="px-5 pb-5 text-center">
                         <div className="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-36 text-blue-800">
@@ -40,7 +50,7 @@ export default function CardFeature(){
                         </p>
                     </div>
                 </div>
-                <div class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+                <div data-aos='fade-up' data-aos-delay='300' class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div class="px-5 pb-5 text-center">
                         <div className="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-36 text-blue-800">
@@ -56,7 +66,7 @@ export default function CardFeature(){
                         </p>
                     </div>
                 </div>
-                <div class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+                <div data-aos='fade-up' data-aos-delay='500' class="md:w-1/5 mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div class="px-5 pb-5 text-center">
                         <div className="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-36 text-blue-800">

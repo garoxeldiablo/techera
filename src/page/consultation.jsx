@@ -2,8 +2,18 @@ import ConsultationCardSlider from "../components/consultationslider";
 import Footer from "../components/footer";
 import NavbarClient from "../components/navbarclient";
 import { Rating,RatingStar } from "flowbite-react";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 export default function Consultation () {
+    useEffect(()=>{
+        Aos.init({
+            duration: 1000,
+            once: true
+        })
+    })
+
     return (
     <>
         <div className="relative z-50">
@@ -20,7 +30,7 @@ export default function Consultation () {
           <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-sky-950 opacity-70"></div>
           <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
-            <div className="relative px-40">
+            <div data-aos='fade-right' className="relative px-40">
               <h2 className="text-white text-4xl font-bold mb-4 text-justify">
                 Konsultasikan <br />
                 Masalahmu!

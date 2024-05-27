@@ -5,22 +5,30 @@ export default function CardTechnician(){
         {
             name: 'Jovis Jocunda',
             role: 'Software',
-            img: '../src/assets/technician/me1.jpg'
+            img: '../src/assets/technician/me1.jpg',
+            aosdelay: '100',
+            aos: 'fade-right'
         },
         {
             name: 'Agus Bisana',
             role: 'Hardware',
-            img: '../src/assets/technician/a.jpg'
+            img: '../src/assets/technician/a.jpg',
+            aosdelay: '300',
+            aos: 'fade-left'
         },
         {
             name: 'Gideon Aji',
             role: 'Networking',
-            img: '../src/assets/technician/g.jpg'
+            img: '../src/assets/technician/g.jpg',
+            aosdelay: '500',
+            aos: 'fade-right'
         },
         {
             name: 'Shaela Mayselina',
             role: 'Cyber Security',
-            img: '../src/assets/technician/s.jpg'
+            img: '../src/assets/technician/s.jpg',
+            aosdelay: '700',
+            aos: 'fade-left'
         },
 
     ]
@@ -28,7 +36,7 @@ export default function CardTechnician(){
     return(
         <>
         {teknisi.map((teksnisii)=>(
-        <div class="flex flex-col items-center bg-white border rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+        <div data-aos={teksnisii.aos} data-aos-delay={teksnisii.aosdelay} class="flex flex-col items-center bg-white border rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
             <img class="object-fit w-24 rounded-t-lg h-24 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={teksnisii.img} alt=""/>
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <div>

@@ -106,6 +106,11 @@ export default function Home() {
     {/* card */}
 
     {/* technician */}
+    <div className='text-center mb-6'>
+          <h1 className='text-4xl text-blue-800 font-semibold my-2'>Teknisi dengan record terbaik</h1>
+          <p className='text-gray-500'>Temukan teknisi berpengalaman dengan riwayat penyelesaian terbaik dan siap untuk menyelesaikan masalah komputer anda.
+        </p>
+    </div>
     <div className='flex justify-center m-2'>
       <div className='grid grid-cols-2 gap-4'>
       <CardTechnician/>
@@ -116,7 +121,7 @@ export default function Home() {
     {/* qna */}
     <div className='my-32 py-8'>
       <div className='md:flex justify-center p-6'>
-        <div className='max-w-md mb-4'>
+        <div data-aos='fade-right' className='max-w-md mb-4'>
           <h1 className='text-4xl text-blue-800 font-semibold my-2'>Frequently Asked Questions</h1>
           <p className='text-gray-500 mb-7'>Berikut adalah pertanyaan yang sering diajukan untuk solusi cepat terhadap pertanyaan umum.</p>
           <p className="mb-2 text-gray-700 dark:text-gray-400 font-bold">
@@ -124,7 +129,7 @@ export default function Home() {
           </p>
           <button className='p-2 bg-blue-800 text-white w-36 rounded-md'>Tanyakan</button>
         </div>
-        <div className='max-w-sm'>
+        <div data-aos='fade-left' className='max-w-sm'>
         <div className="p-4 bg-gray-100 rounded-lg">
           <Accordionn
             title="Apa itu techera?"
