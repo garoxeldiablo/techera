@@ -1,11 +1,11 @@
 import BlogCardSlider from '../components/blogcardslider'
 import Footer from '../components/footer'
-import NavbarClient from '../components/navbarclient'
+import NavbarGuest from '../components/navbarguest'
 
 const Blog = () => {
     return (
         <>
-            <NavbarClient/>
+            <NavbarGuest/>
 
             <div className="pt-40 pb-40 px-60 flex justify-between">
                 <div>

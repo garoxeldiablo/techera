@@ -1,12 +1,12 @@
 import ConsultationCardSlider from "../components/consultationslider";
 import Footer from "../components/footer";
-import NavbarClient from "../components/navbarclient";
 import { Rating,RatingStar } from "flowbite-react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import NavbarGuest from "../components/navbarguest";
 
-export default function Consultation () {
+export default function Consultation ({loginStatus}) {
     useEffect(()=>{
         Aos.init({
             duration: 1000,
@@ -14,10 +14,12 @@ export default function Consultation () {
         })
     })
 
+    
+
     return (
     <>
         <div className="relative z-50">
-            <NavbarClient/>
+            <NavbarGuest/>
         </div>
         
         <div className="pt-24 mb-20">

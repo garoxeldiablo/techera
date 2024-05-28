@@ -13,28 +13,6 @@ export function SignIn() {
 
   const navigate = useNavigate();
 
-  // handle submit
-  const [input, setInput] = useState({
-    username: "",
-    password: "",
-  });
-
-  const handleSubmitEvent = (e) => {
-    e.preventDefault();
-    if (input.username !== "" && input.password !== "") {
-      //dispatch action from hooks
-    }
-    alert("please provide a valid input");
-  };
-
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setInput((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
     <div className="flex h-screen">
       <div className="w-2/5 hidden items-center justify-center lg:flex bg-blue-700 text-black">
@@ -51,20 +29,20 @@ export function SignIn() {
               <h1 className="text-md font-semibold mb-6 text-gray-500 text-center">Masuk ke Akun Anda</h1>
             </div>
 
-          <form onSubmit={handleSubmitEvent} method="POST" className="space-y-4">
+          <form method="POST" className="space-y-4">
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input onChange={handleInput} type="text" id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='agus.pengendalireact@example.com'/>
+              <input type="text" id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='agus.pengendalireact@example.com'/>
             </div>
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">Kata Sandi</label>
-              <input onChange={handleInput} type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='masukkan kata sandi anda'/>
+              <input type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='masukkan kata sandi anda'/>
             </div>
 
             <div>
-              <button onClick={()=> navigate('/clientarea')} type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
+              <button onClick={()=> navigate('/')} type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
             </div>
 
             <div className="mt-4 text-sm text-gray-600 text-center">

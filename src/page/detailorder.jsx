@@ -1,11 +1,11 @@
-import NavbarClient from "../components/navbarclient";
 import Footer from "../components/footer";
 import ActiveFeature from "../components/activefeature";
+import NavbarGuest from "../components/navbarguest";
 
 export default function DetailOrder(){
     return(
         <>
-            <NavbarClient/>
+            <NavbarGuest/>
             <div className="relative main-content md:px-14 px-4 top-24">
 
                 {/* detail order */}

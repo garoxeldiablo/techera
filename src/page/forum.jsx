@@ -1,11 +1,11 @@
 import Footer from "../components/footer";
-import NavbarClient from "../components/navbarclient";
 import { Link } from "react-router-dom";
+import NavbarGuest from "../components/navbarguest";
 
 export default function Forum() {
   return (
     <>
-      <NavbarClient />
+      <NavbarGuest />
 
       <div className="pt-24 mb-20">
         {/* About Forum */}

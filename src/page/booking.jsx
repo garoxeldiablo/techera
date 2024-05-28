@@ -1,10 +1,10 @@
 import { Rating, RatingStar } from "flowbite-react";
-import NavbarClient from "../components/navbarclient";
 import DateTimeInput from "../components/datetime";
 import Footer from "../components/footer";
 import Modal from "../components/bookmodal";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavbarGuest from "../components/navbarguest";
 
 export default function Booking() {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function Booking() {
 
   return (
     <>
-      <NavbarClient />
+      <NavbarGuest />
 
       <div className="relative main-content top-24 px-14 mb-36">
         {/* Back button and Informasi Teknsii text */}

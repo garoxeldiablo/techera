@@ -1,6 +1,7 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import LoginStatus from './loginstatus'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
@@ -14,7 +15,6 @@ function classNames(...classes) {
 }
 
 export default function NavbarGuest(){
-    const navigate = useNavigate();
     return(
         <>
             <Disclosure as="nav" className="bg-white shadow-md fixed z-10 w-full">
@@ -60,7 +60,7 @@ export default function NavbarGuest(){
                         </div>
                         </div>
                     </div>
-                    <button className='bg-blue-700 text-white py-2 px-3 rounded-md transition ease-in delay-20 hover:bg-blue-600' onClick={()=>navigate('/signin')}>Masuk</button>
+                    <LoginStatus isLoggedIn={true} name='Agus Bisana'/>
                     </div>
                 </div>
 
