@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-export function SignIn() {
+export default function SignIn() {
   useEffect(() => {
     Aos.init({
         duration: 1000,

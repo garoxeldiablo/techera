@@ -66,7 +66,7 @@ export default function LoginStatus({name,isLoggedIn}){
                             </Menu.Item>
                             </Menu.Items>
                         </Transition>
-                        </Menu>
+                </Menu>
             </>
         )
     } else {

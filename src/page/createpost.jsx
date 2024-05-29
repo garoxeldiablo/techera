@@ -1,13 +1,11 @@
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
-import NavbarGuest from "../components/navbarguest";
 
 export default function CreatePost() {
   const navigate = useNavigate();
 
   return (
     <>
-      <NavbarGuest />
       <div className="relative main-content top-24 px-10 mb-40">
         
         {/* Back button and Create Post text */}

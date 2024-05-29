@@ -4,9 +4,8 @@ import { Rating,RatingStar } from "flowbite-react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-import NavbarGuest from "../components/navbarguest";
 
-export default function Consultation ({loginStatus}) {
+export default function Consultation () {
     useEffect(()=>{
         Aos.init({
             duration: 1000,
@@ -18,9 +17,6 @@ export default function Consultation ({loginStatus}) {
 
     return (
     <>
-        <div className="relative z-50">
-            <NavbarGuest/>
-        </div>
         
         <div className="pt-24 mb-20">
         <div className="relative w-full h-64">

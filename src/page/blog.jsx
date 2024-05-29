@@ -1,12 +1,9 @@
 import BlogCardSlider from '../components/blogcardslider'
 import Footer from '../components/footer'
-import NavbarGuest from '../components/navbarguest'
 
 const Blog = () => {
     return (
         <>
-            <NavbarGuest/>
-
             <div className="pt-40 pb-40 px-60 flex justify-between">
                 <div>
                     <h1 className="text-blue-800 font-bold text-4xl pb-10">Halo! Agus Bisana!</h1>

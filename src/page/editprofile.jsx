@@ -1,6 +1,5 @@
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
-import NavbarGuest from "../components/navbarguest";
 
 export default function EditProfile() {
   const navigate = useNavigate();
@@ -8,7 +7,6 @@ export default function EditProfile() {
   return (
     <>
       {/* Navbar */}
-      <NavbarGuest />
 
       <div className="relative main-content top-24 px-10 mb-36">
         

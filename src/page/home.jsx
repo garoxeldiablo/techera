@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Carousel } from 'flowbite-react'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import NavbarGuest from '../components/navbarguest';
 import Footer from '../components/footer';
 import CardTechnician from '../components/cardtechnician';
 import CardFeature from '../components/cardfeature';
@@ -18,8 +17,6 @@ export default function Home() {
 
   return (
     <>
-    {/* navbar */}
-    <NavbarGuest/>
 
     {/* hero */}
     <section>
