@@ -1,8 +1,10 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from './hooks/authprovider'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from './store/reducers'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
@@ -17,7 +19,10 @@ function classNames(...classes) {
 
 export default function NavbarGuest(){
 
-    const { isAuthenticated, logout } = useAuth();
+    const location = useLocation();
+    const isAuthenticated = useSelector((state)=> state.auth.isAuthenticated);
+    const dispatch = useDispatch();
+
     const navigate = useNavigate();
 
     if (location.pathname === '/signup') {
@@ -120,7 +125,7 @@ export default function NavbarGuest(){
                             <Menu.Item>
                                 {({ active }) => (
                                 <a
-                                    href="/signup"
+                                    onClick={()=>dispatch(logout())}
                                     className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-blue-900')}
                                 >
                                     Keluar

@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useDispatch } from 'react-redux';
+import { login } from '../components/store/reducers';
 
 export default function SignIn() {
+
   useEffect(() => {
     Aos.init({
         duration: 1000,
@@ -12,6 +15,12 @@ export default function SignIn() {
   })
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogin = () => {
+    dispatch(login());
+    navigate('/');
+  };
 
   return (
     <div className="flex h-screen">
@@ -42,7 +51,7 @@ export default function SignIn() {
             </div>
 
             <div>
-              <button onClick={()=> navigate('/')} type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
+              <button onClick={handleLogin} type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
             </div>
 
             <div className="mt-4 text-sm text-gray-600 text-center">
