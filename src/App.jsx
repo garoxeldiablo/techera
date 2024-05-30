@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import { AuthProvider } from "./components/hooks/authprovider.jsx"
 import SignIn from "./page/signin.jsx" 
 import CreatePost from "./page/createpost"
 import NavbaGuest from "./components/navbarguest"

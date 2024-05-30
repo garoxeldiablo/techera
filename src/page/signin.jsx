@@ -16,10 +16,33 @@ export default function SignIn() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [email,setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleLogin = () => {
-    dispatch(login());
-    navigate('/');
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+
+      const data = await response.json();
+      
+      // Contoh: Menyimpan token atau data lainnya jika diperlukan
+      localStorage.setItem('token', data.token);
+
+      dispatch(login(data.login));
+      navigate('/');
+    } catch (error) {
+      console.log('Error during login:', error);
+    }
   };
 
   return (
@@ -38,16 +61,16 @@ export default function SignIn() {
               <h1 className="text-md font-semibold mb-6 text-gray-500 text-center">Masuk ke Akun Anda</h1>
             </div>
 
-          <form method="POST" className="space-y-4">
+          <form className="space-y-4">
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="text" id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='agus.pengendalireact@example.com'/>
+              <input onChange={(e)=> setEmail(e.target.value)} type="email" value={email} id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='agus.pengendalireact@example.com'/>
             </div>
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">Kata Sandi</label>
-              <input type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='masukkan kata sandi anda'/>
+              <input onChange={(e)=> setPassword(e.target.value)} value={password} type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='masukkan kata sandi anda'/>
             </div>
 
             <div>
