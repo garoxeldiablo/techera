@@ -6,12 +6,13 @@ const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 
 // Action Creators
-export const login = () => ({ type: LOGIN });
+// Action Creators
+export const login = (token) => ({ type: LOGIN, payload: token });
 export const logout = () => ({ type: LOGOUT });
 
 // Initial State
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: false
 };
 
 // Auth Reducer
