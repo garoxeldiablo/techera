@@ -4,6 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useDispatch } from 'react-redux';
 import { login } from '../components/store/reducers';
+import axios from 'axios'
 
 export default function SignIn() {
 
@@ -16,32 +17,24 @@ export default function SignIn() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [email,setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
   const handleLogin = async () => {
+
     try {
-      const response = await fetch('', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
+      const response = await axios.post("http://localhost:3000/signin", {
+        email,
+        password,
       });
 
-      if (!response.ok) {
-        throw new Error('Login failed');
-      }
-
-      const data = await response.json();
-      
-      // Contoh: Menyimpan token atau data lainnya jika diperlukan
+      const data = response.data;
       localStorage.setItem('token', data.token);
-
       dispatch(login(data.login));
       navigate('/');
+
     } catch (error) {
-      console.log('Error during login:', error);
+      alert('invalid email or password');
     }
   };
 
@@ -73,8 +66,9 @@ export default function SignIn() {
               <input onChange={(e)=> setPassword(e.target.value)} value={password} type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='masukkan kata sandi anda'/>
             </div>
 
+
             <div>
-              <button onClick={handleLogin} type="submit" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
+              <button onClick={handleLogin} type="button" className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Masuk</button>
             </div>
 
             <div className="mt-4 text-sm text-gray-600 text-center">
