@@ -20,18 +20,28 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
-  const handleLogin = async () => {
-
+  const handleLogin = async (e) => {
+    e.preventDefault()
     try {
       const response = await axios.post("http://localhost:3000/signin", {
         email,
         password,
       });
+      const data = response.data.userAuth;      
+      localStorage.setItem('token', JSON.stringify(data));
+      const user = data[0];
+      localStorage.setItem('username', JSON.stringify(user.username));
 
-      const data = response.data;
-      localStorage.setItem('token', data.token);
-      dispatch(login(data.login));
+      // const userData = response.data.data.userAuth;
+
+      // const user = userData[0];
+      // localStorage.setItem('userInfo', JSON.stringify(user));
+
+
+      dispatch(login(data));
+      
       navigate('/');
+      window.location.reload();
 
     } catch (error) {
       alert('invalid email or password');

@@ -2,9 +2,9 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
 import { Outlet, useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from './hooks/authprovider'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout } from './store/reducers'
+import { login, logout } from './store/reducers'
+import { useEffect,useState } from 'react'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
@@ -22,6 +22,21 @@ export default function NavbarGuest(){
     const location = useLocation();
     const isAuthenticated = useSelector((state)=> state.auth.isAuthenticated);
     const dispatch = useDispatch();
+
+    // tampilkan nama user
+    const [displayUsername, setDisplayUsername] = useState(() => JSON.parse(localStorage.getItem('username')));
+
+    useEffect(() => {
+        const usernameData = localStorage.getItem('username');
+
+        if (usernameData) {
+            const parsedUsername = JSON.parse(usernameData);
+            console.log(parsedUsername);
+            setDisplayUsername(parsedUsername);
+        }
+    }, []); // Empty dependency array ensures the effect runs only once
+
+    console.log(displayUsername);
 
     const navigate = useNavigate();
 
@@ -90,7 +105,7 @@ export default function NavbarGuest(){
                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                 alt=""
                             />
-                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{name}</p>
+                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p>
                             </Menu.Button>
                         </div>
                         <Transition
