@@ -32,12 +32,6 @@ export default function SignIn() {
       const user = data[0];
       localStorage.setItem('username', JSON.stringify(user.username));
 
-      // const userData = response.data.data.userAuth;
-
-      // const user = userData[0];
-      // localStorage.setItem('userInfo', JSON.stringify(user));
-
-
       dispatch(login(data));
       
       navigate('/');
