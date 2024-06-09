@@ -8,6 +8,7 @@ const db = mysql.createPool ({
     database: process.env.DATABASE
 })
 
+
 async function query(command, values) {
     try {
         const [results] = await db.query(command, values ?? [])

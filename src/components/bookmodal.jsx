@@ -42,8 +42,8 @@ const Modal = ({ isOpen, onClose }) => {
 
   return (
     <div className="md:fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <section className="bg-white rounded-md">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <section className="bg-white rounded-md mt-14">
+        <div className="py-6 px-4 mx-auto max-w-screen-xl lg:px-6">
             
             <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                 {products.map((prod)=> (

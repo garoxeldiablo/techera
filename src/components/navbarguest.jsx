@@ -24,27 +24,27 @@ export default function NavbarGuest(){
     const dispatch = useDispatch();
 
     // tampilkan nama user
-    const [displayUsername, setDisplayUsername] = useState(() => JSON.parse(localStorage.getItem('username')));
+    // const [displayUsername, setDisplayUsername] = useState(() => JSON.parse(localStorage.getItem('username')));
 
-    useEffect(() => {
-        const usernameData = localStorage.getItem('username');
+    // useEffect(() => {
+    //     const usernameData = localStorage.getItem('username');
 
-        if (usernameData) {
-            const parsedUsername = JSON.parse(usernameData);
-            console.log(parsedUsername);
-            setDisplayUsername(parsedUsername);
-        }
-    }, []); // Empty dependency array ensures the effect runs only once
+    //     if (usernameData) {
+    //         const parsedUsername = JSON.parse(usernameData);
+    //         console.log(parsedUsername);
+    //         setDisplayUsername(parsedUsername);
+    //     }
+    // }, []); // Empty dependency array ensures the effect runs only once
 
-    console.log(displayUsername);
+    // console.log(displayUsername);
 
     const navigate = useNavigate();
 
-    if (location.pathname === '/signup') {
+    if (location.pathname === '/users') {
         return null;
       }
 
-    if (location.pathname === '/signin') {
+    if (location.pathname === '/login') {
         return null;
       }
 
@@ -105,7 +105,7 @@ export default function NavbarGuest(){
                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                 alt=""
                             />
-                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p>
+                            {/* <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p> */}
                             </Menu.Button>
                         </div>
                         <Transition
@@ -152,7 +152,7 @@ export default function NavbarGuest(){
                             </Menu>
                             </>
                         ):(
-                            <button className='bg-blue-700 text-white py-2 px-3 rounded-md transition ease-in delay-20 hover:bg-blue-600' onClick={()=>navigate('/signin')}>Masuk</button>
+                            <button className='bg-blue-700 text-white py-2 px-3 rounded-md transition ease-in delay-20 hover:bg-blue-600' onClick={()=>navigate('/login')}>Masuk</button>
                         )}
                         </div>
                     </div>

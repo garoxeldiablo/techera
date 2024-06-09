@@ -7,22 +7,22 @@ const LOGOUT = 'LOGOUT';
 
 // Action Creators
 // Action Creators
-export const login = (token) => ({ type: LOGIN, payload: {token} });
+export const login = (accessToken) => ({ type: LOGIN, payload: {accessToken} });
 export const logout = () => ({ type: LOGOUT });
 
 // Initial State
 const initialState = {
-  isAuthenticated: true,
-  token: null,
+  isAuthenticated: false,
+  accessToken: null,
 };
 
 // Auth Reducer
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN:
-      return { ...state, isAuthenticated: true, token:action.payload };
+      return { ...state, isAuthenticated: true, accessToken:action.payload };
     case LOGOUT:
-      return { ...state, isAuthenticated: false, token:null };
+      return { ...state, isAuthenticated: false, accessToken:null };
     default:
       return state;
   }

@@ -4,7 +4,7 @@ import ActiveFeature from "../components/activefeature";
 export default function DetailOrder(){
     return(
         <>
-            <div className="relative main-content md:px-14 px-4 top-24">
+            <div className="relative main-content md:px-14 px-4 pt-24">
 
                 {/* detail order */}
                 <div className="md:flex">

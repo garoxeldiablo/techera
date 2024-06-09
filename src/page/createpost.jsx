@@ -9,7 +9,7 @@ export default function CreatePost() {
       <div className="relative main-content top-24 px-10 mb-40">
         
         {/* Back button and Create Post text */}
-        <div className=" relative flex items-center mb-15 ml-40">
+        <div className=" relative flex items-center mb-15 md:ml-40">
           <button onClick={() => navigate('/forum')} className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,6 @@ export default function CreatePost() {
               htmlFor="comment"
               className="block mb-2 text-sm font-medium text-gray-900"
             >
-              KOMEN
             </label>
             <textarea
               id="comment"

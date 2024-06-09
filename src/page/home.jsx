@@ -26,7 +26,7 @@ export default function Home() {
 
     {/* hero */}
     <section>
-      <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl py-40">
+      <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl pt-24 md:py-40">
         <div className="flex w-full mx-auto text-left">
           <div className="relative inline-flex items-center mx-auto align-middle">
             <div data-aos='fade-up' className="text-center">
@@ -48,6 +48,9 @@ export default function Home() {
       </div>
     </section>
     {/* hero */}
+
+    {/* modal */}
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
 
     {/* carousel */}
     <div className='flex justify-center'>
@@ -103,9 +106,6 @@ export default function Home() {
       </div>
     </div>
     {/* about */}
-
-    {/* modal */}
-    <Modal isOpen={isModalOpen} onClose={closeModal} />
 
     {/* card */}
     <CardFeature/>

@@ -22,24 +22,59 @@ export default function SignIn() {
   
   const handleLogin = async (e) => {
     e.preventDefault()
+    // try {
+    //   const response = await axios.post("http://localhost:3000/login", {
+    //     email,
+    //     password
+    //   },{
+    //     withCredentials: true
+    //   });
+    //   const data = response.data.userAuth;      
+    //   localStorage.setItem('token', JSON.stringify(data));
+    //   const user = data[0];
+    //   localStorage.setItem('username', JSON.stringify(user.username));
+      
+    //   dispatch(login(data));
+      
+    //   navigate('/');
+    //   window.location.reload();
+
+    // } catch (error) {
+    //   alert('invalid email or password');
+    // }
+
     try {
-      const response = await axios.post("http://localhost:3000/signin", {
-        email,
-        password,
+      const response = await axios.post("http://localhost:5000/login", {
+          email,
+          password,
+      },{
+        headers: 'Access-Control-Allow-Origin',
+        withCredentials: true
       });
-      const data = response.data.userAuth;      
-      localStorage.setItem('token', JSON.stringify(data));
-      const user = data[0];
-      localStorage.setItem('username', JSON.stringify(user.username));
+
+      const data = response.data.accessToken;
+
+      // Store the access token in local storage or context (as per your application's design)
+      localStorage.setItem('user', data);
+      console.log(data)
 
       dispatch(login(data));
-      
-      navigate('/');
-      window.location.reload();
 
-    } catch (error) {
-      alert('invalid email or password');
-    }
+      // Optionally, navigate to a different page or update the UI
+      console.log('Login successful');
+  } catch (error) {
+      console.error('Login failed', error);
+      if (error.response) {
+          // Handle different status codes accordingly
+          if (error.response.status === 404) {
+              console.error('Email not found');
+          } else if (error.response.status === 400) {
+              console.error('Wrong password');
+          } else {
+              console.error('An error occurred');
+          }
+      }
+  }
   };
 
   return (
@@ -98,7 +133,7 @@ export default function SignIn() {
           </form>
 
           <div className="mt-4 text-sm text-gray-600 text-center">
-            <p>Belum punya akun? <button onClick={()=>navigate('/signup')} className="text-black hover:underline">buat akun</button>
+            <p>Belum punya akun? <button onClick={()=>navigate('/users')} className="text-black hover:underline">buat akun</button>
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { query } from "../config/db.js"
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import createUsersTable from "../models/UserModel.js";
+// import createUsersTable from "../models/UserModel.js";
 
 export const getUsers = async(req,res) => {
     try {
@@ -41,7 +41,7 @@ export const login = async (req, res) => {
     `;
 
     const updateUserTokenQuery = `
-        UPDATE users SET refresh_token = ? WHERE id = ?;
+        UPDATE users SET refresh_token = ? WHERE id_user = ?;
     `;
 
     try {

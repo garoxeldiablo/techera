@@ -4,12 +4,31 @@ import { Link } from "react-router-dom";
 export default function Forum() {
   const forum = [
     {
-      name : "",
-      discuss : "",
-      date : "",
-      img : "",
-      like : "",
-      sumDiscuss : ""
+      name : "Shaela",
+      imgProfil : "https://randomuser.me/api/portraits/men/32.jpg",
+      discuss : "Gimana cara memperbaiki laptop yang blue screen?",
+      date : "20/03/2024",
+      img : "src/assets/content/post 1.png",
+      like : "15",
+      sumDiscuss : "5"
+    },
+    {
+      name : "Shaela",
+      imgProfil : "https://randomuser.me/api/portraits/men/32.jpg",
+      discuss : "Gimana cara memperbaiki laptop yang blue screen?",
+      date : "20/03/2024",
+      img : "src/assets/content/post 1.png",
+      like : "15",
+      sumDiscuss : "5"
+    },
+    {
+      name : "Shaela",
+      imgProfil : "https://randomuser.me/api/portraits/men/32.jpg",
+      discuss : "Gimana cara memperbaiki laptop yang blue screen?",
+      date : "20/03/2024",
+      img : "src/assets/content/post 1.png",
+      like : "15",
+      sumDiscuss : "5"
     }
   ]
 
@@ -124,30 +143,31 @@ export default function Forum() {
 
           {/* Card Topic */}
           <div>
-            <div className="post1 max-w-4xl mx-auto p-4">
-              <div className="border-2 border-blue-800 rounded-lg flex items-center p-2">
-                <div className="relative ml-6 flex items-center gap-3 bottom-10">
+            {forum.map((forums)=>(
+              <div className="post1 max-w-4xl mx-auto p-4">
+              <div className="border-2 border-blue-800 rounded-lg flex flex-col md:flex-row items-center p-2">
+                <div className="relative md:ml-6 flex items-center gap-3 md:bottom-10">
                   <img
                     className="w-10 h-10 rounded-full"
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    src={forums.imgProfil}
                     alt="Profile"
                   />
-                  <div className="text-sm font-medium text-gray-900">ANTON</div>
+                  <div className="text-sm font-medium text-gray-900">{forums.name}</div>
                 </div>
-                <div className="relative flex-grow right-28 ml-3 mt-14">
+                <div className="relative flex-grow md:ml-3 md:mt-14 text-center md:text-left">
                   <div className="mt-2 text-sm font-medium text-gray-900">
-                    Gimana cara memperbaiki laptop yang blue screen?
+                    {forums.discuss}
                   </div>
-                  <div className="mt-2 text-sm text-gray-500">20/03/2024</div>
+                  <div className="mt-2 text-sm text-gray-500">{forums.date}</div>
                 </div>
 
-                <div className="relative flex-shrink-0 grid grid-cols-1 gap-2 mr-5 top-4">
+                <div className="relative flex-shrink-0 grid grid-cols-1 gap-2 md:mr-5 mt-4 md:mt-0 top-4">
                   <img
                     className="w-32 h-32 object-cover rounded-md"
-                    src="src\assets\content\post 1.png"
+                    src={forums.img}
                     alt="Post"
                   />
-                  <div className="likecomment relative flex items-center justify-between text-blue-800 right-36 bottom-8">
+                  <div className="likecomment relative flex items-center justify-between text-blue-800 md:right-36 bottom-8 mx-auto md:mx-0">
                     <button className="flex items-center space-x-1">
                       <svg
                         className="w-6 h-6 hover:text-blue-400"
@@ -163,7 +183,7 @@ export default function Forum() {
                           d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
                         ></path>
                       </svg>
-                      <span className="text-sm">15</span>
+                      <span className="text-sm">{forums.like}</span>
                     </button>
                     <button className="flex items-center space-x-1">
                       <svg
@@ -187,13 +207,15 @@ export default function Forum() {
                           d="M8 10h.01M12 10h.01M16 10h.01M21 16a2.5 2.5 0 00-2.5-2.5H5.5A2.5 2.5 0 003 16v1.5A2.5 2.5 0 005.5 20H10l4 4v-4h2.5A2.5 2.5 0 0021 17.5V16z"
                         ></path>
                       </svg>
-                      <span className="text-sm">5</span>
+                      <span className="text-sm">{forums.sumDiscuss}</span>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
+            ))}
           </div>
+
         </div>
       </div>
 

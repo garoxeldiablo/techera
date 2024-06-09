@@ -9,6 +9,7 @@ async function createUsersTable() {
                 name VARCHAR(255) NOT NULL,
                 email VARCHAR(255) NOT NULL,
                 password VARCHAR(255) NOT NULL,
+                img_user BLOB,
                 refresh_token TEXT
             ) ENGINE=InnoDB;
         `;
