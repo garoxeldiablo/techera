@@ -13,113 +13,120 @@ export default function Consultation () {
         })
     })
 
-    
+    // teknisi aktif dengan user
+    const teknisiAktif = [
+        {
+            id: 1,
+            name: "Jovis Jocunda",
+            category: "Software",
+        }
+    ]
 
+    
     return (
     <>
         
-        <div className="pt-24 mb-20">
-        <div className="relative w-full h-64">
-          <img
-            className="h-full w-full object-cover"
-            src="src/assets/content/consultation-hero.jpg"
-            alt="Random image"
-          />
-          <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-sky-950 opacity-70"></div>
-          <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
-            <div data-aos='fade-right' className="relative px-40">
-              <h2 className="text-white text-4xl font-bold mb-4 text-justify">
-                Konsultasikan <br />
-                Masalahmu!
-              </h2>
-              <p className="desc text-white text-justify">
-              Selamat datang di konsultasi, di mana para ahli akan memberikan solusi dari tantangan teknis Anda dan mengoptimalkan pengalaman komputasi Anda baik itu pemecahan masalah perangkat keras, mengatasi gangguan perangkat lunak, atau mengoptimalkan kinerja sistem. Tim ahli kami yang berdedikasi siap membantu Anda di setiap langkah.</p>
+        <div className="pt-24 md:mb-20">
+            <div className="relative w-full md:h-64">
+            <img
+                className="h-full w-full object-cover"
+                src="src/assets/content/consultation-hero.jpg"
+                alt="Random image"
+            />
+            <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-sky-950 opacity-70"></div>
+            <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
+                <div data-aos='fade-right' className="relative md:px-40 p-3">
+                <h2 className="text-white text-4xl font-bold mb-4 text-justify">
+                    Konsultasikan <br />
+                    Masalahmu!
+                </h2>
+                <p className="desc text-white text-start text-sm md:text-lg">
+                Selamat datang di konsultasi, di mana para ahli akan memberikan solusi dari tantangan teknis Anda dan mengoptimalkan pengalaman komputasi Anda baik itu pemecahan masalah perangkat keras, mengatasi gangguan perangkat lunak, atau mengoptimalkan kinerja sistem. Tim ahli kami yang berdedikasi siap membantu Anda di setiap langkah.</p>
+                </div>
             </div>
-          </div>
-        </div>
+            </div>
         </div>
 
-        <div className="mt-6 w-full flex justify-center">
+        <div className="mt-6 w-full flex justify-center p-3">
             <form className="flex items-center w-full max-w-lg">
                 <input 
                     type="text" 
-                    className="flex-grow p-3 border border-blue-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-800 text-xl" 
+                    className="flex-grow p-3 border border-blue-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-800 md:text-xl text-sm" 
                     placeholder="Apa yang Anda butuhkan?">
                 </input>
                 <button 
                     type="submit" 
-                    className="p-3 bg-blue-800 border border-blue-800 text-white rounded-r-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-800 text-xl">
+                    className="p-3 bg-blue-800 border border-blue-800 text-white rounded-r-lg hover:bg-blue-600 transition ease-in focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm md:text-xl">
                     Cari
                 </button>
             </form>
         </div>
 
-        <div className="mt-5 mx-56 border-2 border-blue-800 rounded-md shadow-md">
-            <h2 className="border-b-2 border-blue-800 pt-2 pl-3 pb-1 font-semibold text-blue-800 text-lg">Jadwal Anda</h2>
+        {/* teknisi aktif */}
 
-            <div className="flex justify-between">
-                <div className="flex gap-2 bg-gray-200 rounded-md border border-blue-800 mt-2 mb-3 ml-3 shadow-md">
-                    <img src="../src/assets/technician/me1.jpg" alt="" className="max-w-32 px-3 py-3 object-cover"/>
-                    <div className="pr-20 py-3">
-                        <h2 className="font-bold text-lg">Jovis Jocunda</h2>
-                        <p className="text-xs font-medium -mt-1 mb-2">Software</p>
-                        <Rating>
-                        <RatingStar />
-                        <RatingStar />
-                        <RatingStar />
-                        <RatingStar />
-                        <RatingStar filled={false} />
-                        </Rating>
-                        <button className="text-xs bg-blue-800 text-white px-4 py-0.5 rounded-md shadow-md mt-2">
-                            Chat
-                        </button>
+        <div className="mt-5 mx-auto max-w-4xl rounded-md ">
+            <h2 className="pt-2 pl-3 pb-1 font-semibold text-blue-800 text-lg">Jadwal Anda</h2>
+            <div className="">
+                {teknisiAktif.map((teknisi)=>(
+                    <div className="flex gap-2 rounded-md border mt-2 mb-3 mx-3 shadow-md">
+                        <img src="../src/assets/technician/me1.jpg" alt="" className="object-fit w-28 h-28 rounded-t-lg md:rounded-none m-2"/>
+                        <div className="flex flex-col justify-between pr-4 py-3">
+                            <div>
+                                <h2 className="font-bold text-lg">{teknisi.name}</h2>
+                                <p className="text-xs font-medium -mt-1 mb-2">{teknisi.category}</p>
+                                <Rating>
+                                    <RatingStar />
+                                    <RatingStar />
+                                    <RatingStar />
+                                    <RatingStar />
+                                    <RatingStar filled={false} />
+                                </Rating>
+                            </div>
+                            <button className="text-xs bg-blue-800 text-white px-4 py-1 rounded-md shadow-md mt-2 lg:mt-0">
+                                Chat
+                            </button>
+                        </div>
+                        <div className="flex flex-col justify-center items-center lg:items-center mt-2 mr-5 mb-10 lg:mb-0">
+                            <button className="text-sm text-blue-800 px-5 py-2 border-b hover:border-b-blue-800 transition ease-in">
+                                Solved
+                            </button>
+                            <button className="text-sm text-gray-800 px-5 py-2 border-b hover:border-gray-800 transition ease-in">
+                                Unsolved
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <div className="mt-10 mr-5 mb-10">
-                    <button className="text-md bg-blue-800 text-white px-5 py-2 rounded-md shadow-md">
-                        Solved
-                    </button>
-
-                    <br />
-
-                    <button className="text-md bg-gray-400 text-white pl-3 pr-2.5 py-2 rounded-md shadow-md mt-2">
-                        Unsolved
-                    </button>
-                </div>
+                ))}
             </div>
         </div>
 
-        <div className="mx-56 mt-6 mb-6">
-            <h1 className="text-2xl text-blue-800 font-bold mb-4">Kategori</h1>
+        {/* kategori */}
 
-            <div className="flex justify-between gap-6">
-                <button className="border border-blue-800 shadow-md text-blue-800 px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-lg">
+        <div className="mx-4 md:mx-20 lg:mx-56 mt-6 mb-6">
+            <h1 className="text-xl md:text-2xl text-blue-800 font-bold mb-4">Kategori</h1>
+            <div className="flex flex-wrap gap-4">
+                <button className="border border-blue-800 shadow-md text-blue-800 px-10 md:px-16 lg:px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-md md:text-lg">
                     Software
                 </button>
-
-                <button className="border border-blue-800 shadow-md text-blue-800 px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-lg">
+                <button className="border border-blue-800 shadow-md text-blue-800 px-10 md:px-16 lg:px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-md md:text-lg">
                     Hardware
                 </button>
-
-                <button className="border border-blue-800 shadow-md text-blue-800 px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-lg">
+                <button className="border border-blue-800 shadow-md text-blue-800 px-10 md:px-16 lg:px-20 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-md md:text-lg">
                     Network
                 </button>
-
-                <button className="border border-blue-800 shadow-md text-blue-800 px-16 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-lg">
+                <button className="border border-blue-800 shadow-md text-blue-800 px-8 md:px-12 lg:px-16 rounded-md py-1.5 font-semibold hover:text-white hover:bg-blue-800 text-md md:text-lg">
                     Cyber Security
                 </button>
             </div>
         </div>
 
-        <div className="mx-56 mt-10 mb-2">
+        <div className="mx-4 md:mx-20 lg:mx-56 mt-6 mb-6">
             <h1 className="font-bold text-blue-800 text-2xl">Teknisi Kami</h1>
         </div>
 
         <ConsultationCardSlider/>
 
-        <div className="mx-56 mt-10 mb-2">
+        <div className="lg:mx-56 mt-10 mb-2 p-2">
             <h1 className="font-bold text-blue-800 text-2xl mb-6">Riwayat Pemesanan</h1>
 
             <div className="border-b border-black mb-4">

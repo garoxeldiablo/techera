@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Carousel } from 'flowbite-react'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -6,6 +6,7 @@ import Footer from '../components/footer';
 import CardTechnician from '../components/cardtechnician';
 import CardFeature from '../components/cardfeature';
 import Accordionn from '../components/accordion';
+import Modal from '../components/bookmodal';
 
 export default function Home() {
   useEffect(() => {
@@ -14,6 +15,11 @@ export default function Home() {
         once: true
     })
   })
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
 
   return (
     <>
@@ -31,7 +37,7 @@ export default function Home() {
               </p>
               <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                 <div className="mt-3 rounded-lg sm:mt-0">
-                  <button className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                  <button onClick={openModal} className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Mulai
                     </button>
                 </div>
@@ -98,6 +104,9 @@ export default function Home() {
     </div>
     {/* about */}
 
+    {/* modal */}
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
+
     {/* card */}
     <CardFeature/>
     {/* card */}
@@ -117,9 +126,9 @@ export default function Home() {
 
     {/* qna */}
     <div className='my-32 py-8'>
-      <div className='md:flex justify-center p-6'>
+      <div className='md:flex justify-center p-6 gap-x-6'>
         <div data-aos='fade-right' className='max-w-md mb-4'>
-          <h1 className='text-4xl text-blue-800 font-semibold my-2'>Frequently Asked Questions</h1>
+          <h1 className='text-4xl text-blue-800 font-semibold my-2'>Butuh Pertanyaan Relevan?</h1>
           <p className='text-gray-500 mb-7'>Berikut adalah pertanyaan yang sering diajukan untuk solusi cepat terhadap pertanyaan umum.</p>
           <p className="mb-2 text-gray-700 dark:text-gray-400 font-bold">
           Punya pertanyaan lain?

@@ -15,9 +15,9 @@ export default function Booking() {
   return (
     <>
 
-      <div className="relative main-content top-24 px-14 mb-36">
+      <div className="relative main-content top-24 px-8 mb-36">
         {/* Back button and Informasi Teknsii text */}
-        <div className=" relative flex items-center mb-15 ml-40">
+        <div className=" relative flex mb-15 md:ml-40">
           <button
             onClick={() => navigate("/consultation")}
             className="text-blue-800 text-2xl mr-2"
@@ -37,7 +37,7 @@ export default function Booking() {
               />
             </svg>
           </button>
-          <div className="relative text-blue-800 text-3xl font-bold leading-10 left-4">
+          <div className="relative text-blue-800 text-xl font-bold leading-10 md:left-4">
             Informasi Teknisi
           </div>
         </div>
@@ -116,6 +116,9 @@ export default function Booking() {
           </div>
         </div>
 
+        {/* modal */}
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
+
         {/* review */}
         <div className="mt-4">
           <div className="my-3">
@@ -123,11 +126,11 @@ export default function Booking() {
             <div className="flex gap-x-2 items-center">
               <Rating size="lg">
                 <RatingStar />
-                <p className="ml-2 font-semibold text-gray-900 dark:text-white text-3xl">
+                <p className="ml-2 font-semibold text-gray-900 text-3xl">
                   4.95
                 </p>
               </Rating>
-              <p className="ml-2 text-gray-500 dark:text-white text-xl">
+              <p className="ml-2 text-gray-500 text-xl">
                 / 5.0
               </p>
             </div>
@@ -144,8 +147,8 @@ export default function Booking() {
                 <p className="text-base text-blue-900 font-semibold">
                   Agus Bisana
                 </p>
-                <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <span className="h-1 w-1 rounded-full bg-gray-500" />
+                <p className=" text-gray-500 text-sm">
                   5bln lalu
                 </p>
               </div>
@@ -158,9 +161,9 @@ export default function Booking() {
                     <RatingStar />
                     <RatingStar fill="false" />
                   </Rating>
-                  <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                  <p className=" text-gray-500 text-sm">4.0</p>
                 </div>
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <p className=" text-gray-500 text-sm">
                   Mantap laptop dah ga ngelek lagi
                 </p>
               </div>
@@ -177,8 +180,8 @@ export default function Booking() {
                 <p className="text-base text-blue-900 font-semibold">
                   Agus Bisana
                 </p>
-                <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <span className="h-1 w-1 rounded-full bg-gray-500 " />
+                <p className=" text-gray-500  text-sm">
                   5bln lalu
                 </p>
               </div>
@@ -191,9 +194,9 @@ export default function Booking() {
                     <RatingStar />
                     <RatingStar fill="false" />
                   </Rating>
-                  <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                  <p className=" text-gray-500  text-sm">4.0</p>
                 </div>
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <p className=" text-gray-500  text-sm">
                   Mantap laptop dah ga ngelek lagi
                 </p>
               </div>
@@ -210,8 +213,8 @@ export default function Booking() {
                 <p className="text-base text-blue-900 font-semibold">
                   Agus Bisana
                 </p>
-                <span className="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <span className="h-1 w-1 rounded-full bg-gray-500 " />
+                <p className=" text-gray-500  text-sm">
                   5bln lalu
                 </p>
               </div>
@@ -224,9 +227,9 @@ export default function Booking() {
                     <RatingStar />
                     <RatingStar fill="false" />
                   </Rating>
-                  <p className=" text-gray-500 dark:text-white text-sm">4.0</p>
+                  <p className=" text-gray-500  text-sm">4.0</p>
                 </div>
-                <p className=" text-gray-500 dark:text-white text-sm">
+                <p className=" text-gray-500  text-sm">
                   Mantap laptop dah ga ngelek lagi
                 </p>
               </div>
@@ -234,9 +237,6 @@ export default function Booking() {
             {/* user review */}
           </div>
         </div>
-
-        {/* modal */}
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       <Footer />
     </>

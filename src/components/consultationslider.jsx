@@ -35,7 +35,7 @@ const ConsultationCardSlider = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 3;
+    const itemsPerPage = 1;
 
     const handlePrevClick = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - itemsPerPage : prevIndex - 1));
@@ -47,18 +47,18 @@ const ConsultationCardSlider = () => {
 
     return (
         <>
-        <div className="relative mx-52">
+        <div className="relative md:mx-52">
             <div className="overflow-hidden">
                 <div
                     className="flex transition-transform duration-300"
                     style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
                 >
                     {cards.map((card) => (
-                        <div key={card.id} className="w-[35%] flex-shrink-0 px-4">
+                        <div key={card.id} className="md:w-[35%] w-full flex-shrink-0 px-4">
                             <div className="flex gap-2 rounded-md border border-blue-800 mt-2 mb-3 shadow-md w-full">
-                                <img src={card.imgSrc} alt={card.name} className="w-28 h-28 mx-3 mt-3 mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
+                                <img src={card.imgSrc} alt={card.name} className="w-28 h-28 mx-3 mt-3 md:mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
                                 <div className="pr-20 py-3">
-                                    <h2 className="font-bold text-lg whitespace-nowrap overflow-hidden overflow-ellipsis">{card.name}</h2>
+                                    <h2 className="font-bold text-lg whitespace-nowrap overflow-ellipsis">{card.name}</h2>
                                     <p className="text-xs font-medium -mt-1 mb-2">{card.division}</p>
                                     <Rating>
                                         <RatingStar />
