@@ -24,19 +24,23 @@ export default function NavbarGuest(){
     const dispatch = useDispatch();
 
     // tampilkan nama user
-    // const [displayUsername, setDisplayUsername] = useState(() => JSON.parse(localStorage.getItem('username')));
+    // const [displayUsername, setDisplayUsername] = useState();
 
     // useEffect(() => {
     //     const usernameData = localStorage.getItem('username');
-
+        
     //     if (usernameData) {
-    //         const parsedUsername = JSON.parse(usernameData);
+    //         const parsedUsername = usernameData;
     //         console.log(parsedUsername);
     //         setDisplayUsername(parsedUsername);
     //     }
-    // }, []); // Empty dependency array ensures the effect runs only once
 
-    // console.log(displayUsername);
+
+    // }, 
+    // []); // Empty dependency array ensures the effect runs only once
+
+    // const imgBase64 = localStorage.getItem('imguser');
+    // const mimeType = 'image/jpeg';
 
     const navigate = useNavigate();
 
@@ -100,12 +104,12 @@ export default function NavbarGuest(){
                             <Menu.Button className="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img
+                            {/* <img
                                 className="h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                src={`data:${mimeType};base64,${imgBase64}`}
                                 alt=""
                             />
-                            {/* <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p> */}
+                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p> */}
                             </Menu.Button>
                         </div>
                         <Transition

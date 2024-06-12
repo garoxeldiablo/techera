@@ -52,8 +52,11 @@ export const login = async (req, res) => {
         const match = await bcrypt.compare(password, user.password);
         if (!match) return res.status(400).json({ msg: "Wrong Password" });
 
-        const userId = user.id;
+        const userId = user.id_user;
         const name = user.name;
+        const imgU = user.img_user;
+
+        const imgBase64 = imgU.toString('base64')
 
         const accessToken = jwt.sign({ userId, name, email }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: '20s'
@@ -70,7 +73,7 @@ export const login = async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000
         });
 
-        res.json({ accessToken });
+        res.json({ accessToken, name, imgU : imgBase64 });
     } catch (error) {
         console.error(error);
         res.status(500).json({ msg: "Internal Server Error" });

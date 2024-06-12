@@ -22,26 +22,6 @@ export default function SignIn() {
   
   const handleLogin = async (e) => {
     e.preventDefault()
-    // try {
-    //   const response = await axios.post("http://localhost:3000/login", {
-    //     email,
-    //     password
-    //   },{
-    //     withCredentials: true
-    //   });
-    //   const data = response.data.userAuth;      
-    //   localStorage.setItem('token', JSON.stringify(data));
-    //   const user = data[0];
-    //   localStorage.setItem('username', JSON.stringify(user.username));
-      
-    //   dispatch(login(data));
-      
-    //   navigate('/');
-    //   window.location.reload();
-
-    // } catch (error) {
-    //   alert('invalid email or password');
-    // }
 
     try {
       const response = await axios.post("http://localhost:5000/login", {
@@ -53,12 +33,19 @@ export default function SignIn() {
       });
 
       const data = response.data.accessToken;
+      const dataUser = response.data.name;
+      const imgU = response.data.imgU;
 
       // Store the access token in local storage or context (as per your application's design)
-      localStorage.setItem('user', data);
-      console.log(data)
+      localStorage.setItem('token', data);
+      localStorage.setItem('username', dataUser)
+      localStorage.setItem('imguser', imgU)
+
+      console.log(imgU);
 
       dispatch(login(data));
+      navigate('/');
+      window.location.reload();
 
       // Optionally, navigate to a different page or update the UI
       console.log('Login successful');
