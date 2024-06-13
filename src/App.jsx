@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import SignIn from "./page/signin.jsx" 
-import CreatePost from "./page/createpost"
+// import CreatePost from "./page/createpost"
 import NavbaGuest from "./components/navbarguest"
 import Booking from "./page/booking.jsx"
 import DetailOrder from "./page/detailorder.jsx"
@@ -33,11 +33,11 @@ export default function App(){
                             <Booking />
                         </PrivateRoute>
                         }/>
-                        <Route path="/forum/createpost" element={
+                        {/* <Route path="/forum/createpost" element={
                         <PrivateRoute>
                             <CreatePost />
                         </PrivateRoute>
-                        }/>
+                        }/> */}
                         <Route path="/cart" element={
                         <PrivateRoute>
                             <DetailOrder />
