@@ -15,6 +15,7 @@ import { SignUp } from "./page/signup.jsx";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from "./components/store/store.js"
+import Payment from "./components/payment.jsx"
 
 export default function App(){
     return(
@@ -41,6 +42,7 @@ export default function App(){
                         <Route path="/cart" element={
                         <PrivateRoute>
                             <DetailOrder />
+                            <Payment />
                         </PrivateRoute>
                         }/>
                         <Route path="/editprofile" element={

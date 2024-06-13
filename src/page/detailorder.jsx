@@ -47,7 +47,10 @@ export default function DetailOrder(){
                                 </tbody>
                             </table>
                         </div>
-                        <button className="my-2 md:ml-2 md:mt-8 px-3 py-2 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Pembayaran</button>
+                        <button className="my-2 md:ml-2 md:mt-8 px-3 py-2 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        onClick={() => navigate("/payment")}
+                        >Pembayaran
+                        </button>
                     </div>
                     <div className="md:w-1/2 m-6">
                         <h3 className="text-2xl text-blue-800 mb-2">Teknisi</h3>

@@ -17,24 +17,24 @@ const Modal = ({ isOpen, onClose }) => {
         ]
     },
     {
-        id : 1,
-        product : "Live Chat", 
-        desc : "Diskusi langsung dengan teknisi melalui chat dari techera",
-        price : "IDR 20.000",
+        id : 2,
+        product : "Face to Face", 
+        desc : "Berkonsultasi langsung via Zoom Meeting agar diskusi lebih optimal",
+        price : "IDR 30.000",
         list : [
                 "Diskusi sampai masalah selesai",
-                "Room chat aman",
+                "Tanggal dan jam fleksibel",
                 "Bebas pilih teknisi"
         ]
     },
     {
-        id : 1,
-        product : "Live Chat", 
-        desc : "Diskusi langsung dengan teknisi melalui chat dari techera",
-        price : "IDR 20.000",
+        id : 3,
+        product : "Remote", 
+        desc : "Teknisi akan mengendalikan dan memperbaiki perangkat Anda lewat kendali jarak jauh",
+        price : "IDR 45.000",
         list : [
-                "Diskusi sampai masalah selesai",
-                "Room chat aman",
+                "Proses dapat dilihat secara real-time",
+                "apa ya enaknya?",
                 "Bebas pilih teknisi"
         ]
     }
