@@ -34,7 +34,7 @@ const Modal = ({ isOpen, onClose }) => {
         price : "IDR 45.000",
         list : [
                 "Proses dapat dilihat secara real-time",
-                "apa ya enaknya?",
+                "Efisiensi waktu dan biaya",
                 "Bebas pilih teknisi"
         ]
     }
