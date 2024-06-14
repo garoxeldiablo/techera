@@ -52,7 +52,7 @@ const Modal = ({ isOpen, onClose }) => {
                     <p className="font-light text-gray-500 sm:text-lg ">{prod.desc}</p>
                     <div className="flex justify-center items-baseline my-8">
                         <span className="mr-2 text-3xl font-extrabold">{prod.price}</span>
-                        <span className="text-gray-500 dark:text-gray-400">/session</span>
+                        <span className="text-gray-500 dark:text-gray-400">/sesi</span>
                     </div>
                     <ul role="list" className="mb-8 space-y-4 text-left">
                         {prod.list.map((ls)=> 
@@ -62,13 +62,13 @@ const Modal = ({ isOpen, onClose }) => {
                         </li>
                         )}
                     </ul>
-                    <a href="/cart" className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition ease-in">Get started</a>
+                    <a href="/cart" className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition ease-in">Pilih</a>
                 </div>
                 ))}
 
             </div>
             <div className='flex justify-center'>
-                <button onClick={onClose} className="mt-3 border-b-2 border-white hover:border-gray-600 text-gray-600 px-4 py-2 mr-2 transition ease-in">Cancel</button>
+                <button onClick={onClose} className="mt-3 border-b-2 border-white hover:border-gray-600 text-gray-600 px-4 py-2 mr-2 transition ease-in">Batal</button>
             </div>
         </div>
         </section>

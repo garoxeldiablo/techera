@@ -16,6 +16,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from "./components/store/store.js"
 import Payment from "./components/payment.jsx"
+import SuccessModal from "./components/successmodal.jsx"
 
 export default function App(){
     return(
@@ -43,6 +44,7 @@ export default function App(){
                         <PrivateRoute>
                             <DetailOrder />
                             <Payment />
+                            <SuccessModal />
                         </PrivateRoute>
                         }/>
                         <Route path="/editprofile" element={
