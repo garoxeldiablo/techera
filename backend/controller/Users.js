@@ -12,6 +12,32 @@ export const getUsers = async(req,res) => {
     }
 }
 
+// tampilkan semua data teknisi
+export const getTeknisi = async (req, res) => {
+    try {
+        const qTeknisi = await query("SELECT * FROM teknisi");
+        
+        // Map through each teknisi to convert image to base64
+        const teknisiWithBase64 = qTeknisi.map(teknisi => {
+            if (teknisi.imgteknisi) {
+                // Convert Buffer image to base64 string
+                const base64String = teknisi.imgteknisi.toString('base64');
+                // Return teknisi data with base64 image string
+                return { ...teknisi, imgteknisi: base64String };
+            } else {
+                return teknisi;
+            }
+        });
+
+        return res.status(200).json({ data: teknisiWithBase64 });
+    } catch (error) {
+        console.log("teknisi tidak tampil", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
+}
+
+
+
 export const register = async (req, res) => {
     const { name, email, password, confPassword } = req.body;
     if (password !== confPassword) return res.status(400).json({ msg: "Password and Confirm Password do not match" });
