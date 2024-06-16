@@ -15,7 +15,7 @@ import { SignUp } from "./page/signup.jsx";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from "./components/store/store.js"
-import Payment from "./components/payment.jsx"
+import Payment from "./components/paymentmodal.jsx"
 import SuccessModal from "./components/successmodal.jsx"
 
 export default function App(){
