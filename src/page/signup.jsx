@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export function SignUp() {
   useEffect(() => {
@@ -11,12 +12,51 @@ export function SignUp() {
     })
   })
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("")
+
+  const handleRegister = async (e) => {
+    e.preventDefault()
+
+    try {
+      const response = await axios.post("http://localhost:5000/register", {
+        name,  
+        email,
+        password,
+        confPassword
+      },{
+        headers: 'Access-Control-Allow-Origin',
+        withCredentials: true
+      });
+
+      const res = response.data;
+      console.log('registrasi berhasil', res)
+
+      navigate('/login');
+
+  } catch (error) {
+      console.error('Login failed', error);
+      if (error.response) {
+          // Handle different status codes accordingly
+          if (error.response.status === 404) {
+              console.error('Email not found');
+          } else if (error.response.status === 400) {
+              console.error('Wrong password');
+          } else {
+              console.error('An error occurred');
+          }
+      }
+  }
+  };
+
   const navigate = useNavigate()
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       <div className="w-2/5 hidden items-center justify-center lg:flex bg-blue-700 text-black">
-        <img className="h-screen object-none opacity-50" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img className="h-full object-none opacity-50" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
       </div>
       <div className="w-full bg-white flex items-center justify-center">
         <div data-aos="fade-up" className="max-w-md w-full p-6">
@@ -31,15 +71,15 @@ export function SignUp() {
           <form action="#" method="POST" className="space-y-4">
             <div>
               <label htmlFor="username" className="block text-sm font-medium text-gray-700">Nama Pengguna</label>
-              <input type="text" id="username" name="username" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='buat nama pengguna anda'/>
+              <input onChange={(e)=> setName(e.target.value)} value={name} type="text" id="username" name="username" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='buat nama pengguna anda'/>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="text" id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='loisokekeren@gmail.com'/>
+              <input onChange={(e)=> setEmail(e.target.value)} value={email} type="text" id="email" name="email" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='loisokekeren@gmail.com'/>
             </div>
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">Kata Sandi</label>
-              <input type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='buat kata sandi anda'/>
+              <input onChange={(e)=> setPassword(e.target.value)} value={password} type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='buat kata sandi anda'/>
               <p
                 id="helper-text-explanation"
                 className="mt-2 text-gray-500 dark:text-gray-400 text-xs"
@@ -53,7 +93,11 @@ export function SignUp() {
               </p>
             </div>
             <div>
-              <button type="submit" onClick={() => navigate('/signin')} className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Buat Akun</button>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Konfirmasi Sandi</label>
+              <input onChange={(e)=> setConfPassword(e.target.value)} value={confPassword} type="password" id="password" name="password" className="italic mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" placeholder='buat kata sandi anda'/>
+            </div>
+            <div>
+              <button type="button" onClick={handleRegister} className="w-full bg-blue-700 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Buat Akun</button>
             </div>
             <div className="mt-4 text-sm text-gray-600 text-center">
                 <p>atau dengan ini</p>
@@ -77,7 +121,7 @@ export function SignUp() {
           </div>
           </form>
           <div className="mt-4 text-sm text-gray-600 text-center">
-            <p>Sudah punya akun? <button onClick={()=>navigate('/signin')} className="text-black hover:underline">Masuk di sini</button>
+            <p>Sudah punya akun? <button onClick={()=>navigate('/login')} className="text-black hover:underline">Masuk di sini</button>
             </p>
           </div>
         </div>

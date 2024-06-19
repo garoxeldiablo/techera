@@ -12,7 +12,7 @@ export const logout = () => ({ type: LOGOUT });
 
 // Initial State
 const initialState = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   accessToken: null,
 };
 

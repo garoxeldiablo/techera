@@ -1,48 +1,67 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ArrowRightIcon from '../assets/icon/arrow-r.png';
 import ArrowLeftIcon from '../assets/icon/Arrow.png';
 import { Rating, RatingStar } from 'flowbite-react';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const ConsultationCardSlider = () => {
     const navigate = useNavigate();
 
-    const cards = [
-        { 
-            id: 1, 
-            name: 'Jovis Jocunda', 
-            division: 'Software', 
-            imgSrc: '../src/assets/technician/me1.jpg' 
-        },
-        { 
-            id: 2, 
-            name: 'Agus Bisana', 
-            division: 'Software', 
-            imgSrc: '../src/assets/technician/a.jpg' 
-        },
-        { 
-            id: 3, 
-            name: 'Gideon Aji', 
-            division: 'Software', 
-            imgSrc: '../src/assets/technician/g.jpg' 
-        },
-        { 
-            id: 4, 
-            name: 'Shaela', 
-            division: 'Software', 
-            imgSrc: '../src/assets/technician/s.jpg' 
-        },
-    ];
+    // const cards = [
+    //     { 
+    //         id: 1, 
+    //         name: 'Jovis Jocunda', 
+    //         division: 'Software', 
+    //         imgSrc: '../src/assets/technician/me1.jpg' 
+    //     },
+    //     { 
+    //         id: 2, 
+    //         name: 'Agus Bisana', 
+    //         division: 'Software', 
+    //         imgSrc: '../src/assets/technician/a.jpg' 
+    //     },
+    //     { 
+    //         id: 3, 
+    //         name: 'Gideon Aji', 
+    //         division: 'Software', 
+    //         imgSrc: '../src/assets/technician/g.jpg' 
+    //     },
+    //     { 
+    //         id: 4, 
+    //         name: 'Shaela', 
+    //         division: 'Software', 
+    //         imgSrc: '../src/assets/technician/s.jpg' 
+    //     },
+    // ];
 
+    const [teknisi, setTeknisi] = useState([]);
+      
+    useEffect(() => {
+        const fetchTeknisiData = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/teknisi', {
+            withCredentials: true,
+            });
+            setTeknisi(response.data.data);
+        } catch (e) {
+            console.error('Server error', e);
+        }
+    };
+    fetchTeknisiData();
+    }, []);
+
+    const mimeType = 'image/jpeg';
+      
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 1;
+    const itemsPerPage = 3;
 
     const handlePrevClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - itemsPerPage : prevIndex - 1));
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? teknisi.length - itemsPerPage : prevIndex - 1));
     };
 
     const handleNextClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === cards.length - itemsPerPage ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === teknisi.length - itemsPerPage ? 0 : prevIndex + 1));
     };
 
     return (
@@ -51,15 +70,15 @@ const ConsultationCardSlider = () => {
             <div className="overflow-hidden">
                 <div
                     className="flex transition-transform duration-300"
-                    style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * (150 / itemsPerPage)}%)` }}
                 >
-                    {cards.map((card) => (
-                        <div key={card.id} className="md:w-[35%] w-full flex-shrink-0 px-4">
+                    {teknisi.map((card) => (
+                        <div key={card.Id_teknisi} className="md:w-[35%] w-full flex-shrink-0 px-4">
                             <div className="flex gap-2 rounded-md border border-blue-800 mt-2 mb-3 shadow-md w-full">
-                                <img src={card.imgSrc} alt={card.name} className="w-28 h-28 mx-3 mt-3 md:mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
+                                <img src={`data:${mimeType};base64,${card.imgteknisi}`} alt={card.nama_teknisi} className="w-28 h-28 mx-3 mt-3 md:mb-8 object-cover border border-blue-800 rounded-sm shadow-md"/>
                                 <div className="pr-20 py-3">
-                                    <h2 className="font-bold text-lg whitespace-nowrap overflow-ellipsis">{card.name}</h2>
-                                    <p className="text-xs font-medium -mt-1 mb-2">{card.division}</p>
+                                    <h2 className="font-bold text-lg whitespace-nowrap overflow-ellipsis">{card.nama_teknisi}</h2>
+                                    <p className="text-xs font-medium -mt-1 mb-2">{card.kategori}</p>
                                     <Rating>
                                         <RatingStar />
                                         <RatingStar />
@@ -72,7 +91,7 @@ const ConsultationCardSlider = () => {
                                             Call
                                         </button>
 
-                                        <button onClick={() => navigate('/consultation/booking')} className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
+                                        <button onClick={() => navigate(`/consultation/booking/${key}`)} className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
                                             Detail
                                         </button>
                                     </div>

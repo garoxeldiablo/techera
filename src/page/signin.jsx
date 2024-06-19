@@ -120,7 +120,7 @@ export default function SignIn() {
           </form>
 
           <div className="mt-4 text-sm text-gray-600 text-center">
-            <p>Belum punya akun? <button onClick={()=>navigate('/users')} className="text-black hover:underline">buat akun</button>
+            <p>Belum punya akun? <button onClick={()=>navigate('/register')} className="text-black hover:underline">buat akun</button>
             </p>
           </div>
         </div>

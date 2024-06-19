@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import SignIn from "./page/signin.jsx" 
-// import CreatePost from "./page/createpost"
+import CreatePost from "./page/createpost"
 import NavbaGuest from "./components/navbarguest"
 import Booking from "./page/booking.jsx"
 import DetailOrder from "./page/detailorder.jsx"
@@ -30,16 +30,16 @@ export default function App(){
                         <Route path="/consultation" element={<Consultation />}/>
                         <Route path="/blog" element={<Blog />}/>
                         <Route path="/forum" element={<Forum />}/>
-                        <Route path="/consultation/booking" element={
+                        <Route path="/consultation/booking/:id" element={
                         <PrivateRoute>
                             <Booking />
                         </PrivateRoute>
                         }/>
-                        {/* <Route path="/forum/createpost" element={
+                        <Route path="/forum/createpost" element={
                         <PrivateRoute>
                             <CreatePost />
                         </PrivateRoute>
-                        }/> */}
+                        }/>
                         <Route path="/cart" element={
                         <PrivateRoute>
                             <DetailOrder />
@@ -53,7 +53,7 @@ export default function App(){
                         </PrivateRoute>
                         }/>
                         <Route path="/login" element={<SignIn/>}/>
-                        <Route path="/users" element={<SignUp />} />
+                        <Route path="/register" element={<SignUp />} />
 
                     </Routes>
                     </Router>

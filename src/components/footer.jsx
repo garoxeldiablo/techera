@@ -1,3 +1,5 @@
+import logo from '../assets/logo/logo2.png'
+
 export default function Footer () {
     return <>
         <div className='max-h-svh bg-blue-800'>
@@ -11,7 +13,7 @@ export default function Footer () {
                     </div>
                 </div>
                 <div>
-                    <img className='w-36 my-2 bg-white py-2 rounded-md' src="../src/assets/logo/logo2.png" alt="" />
+                    <img className='w-36 my-2 bg-white py-2 rounded-md' src={logo} alt="" />
                 </div>
                 <div>
                 <h1 className='text-white font-semibold text-lg'>Quick links</h1>

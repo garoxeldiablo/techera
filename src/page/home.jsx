@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 import CardTechnician from '../components/cardtechnician';
 import CardFeature from '../components/cardfeature';
 import Accordionn from '../components/accordion';
-import Modal from '../components/bookmodal';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   useEffect(() => {
@@ -15,11 +15,8 @@ export default function Home() {
         once: true
     })
   })
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,7 +34,7 @@ export default function Home() {
               </p>
               <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                 <div className="mt-3 rounded-lg sm:mt-0">
-                  <button onClick={openModal} className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                  <button onClick={()=>navigate('/consultation')} className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Mulai
                     </button>
                 </div>
@@ -48,9 +45,6 @@ export default function Home() {
       </div>
     </section>
     {/* hero */}
-
-    {/* modal */}
-    <Modal isOpen={isModalOpen} onClose={closeModal} />
 
     {/* carousel */}
     <div className='flex justify-center'>
@@ -154,6 +148,7 @@ export default function Home() {
     {/* footer */}
     <Footer/>
     {/* footer */}
+
   </>
   )
 }

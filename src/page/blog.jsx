@@ -34,19 +34,6 @@ const Blog = () => {
 
             <BlogCardSlider/>
 
-            <div className="px-60 pt-20 pb-5">
-                <h1 className="border-b-2 border-blue-800 text-lg font-bold text-gray-600">Software dan Hardware</h1>
-            </div>
-
-            <BlogCardSlider/>
-
-            <div className="px-60 pt-20 pb-5">
-                <h1 className="border-b-2 border-blue-800 text-lg font-bold text-gray-600">Pemrograman</h1>
-            </div>
-
-            <BlogCardSlider/>
-
-            <div className="mb-40"></div>
 
             <Footer/>
         </>

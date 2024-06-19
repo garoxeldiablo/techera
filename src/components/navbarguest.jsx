@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './store/reducers'
 import { useEffect,useState } from 'react'
 
+import logo from '../assets/logo/logo2.png'
+
 const navigation = [
     { name: 'Home', href: '/', current: false },
     { name: 'Consultation', href: '/consultation', current: false },
@@ -24,33 +26,33 @@ export default function NavbarGuest(){
     const dispatch = useDispatch();
 
     // tampilkan nama user
-    // const [displayUsername, setDisplayUsername] = useState();
+    const [displayUsername, setDisplayUsername] = useState();
 
-    // useEffect(() => {
-    //     const usernameData = localStorage.getItem('username');
+    useEffect(() => {
+        const usernameData = localStorage.getItem('username');
         
-    //     if (usernameData) {
-    //         const parsedUsername = usernameData;
-    //         console.log(parsedUsername);
-    //         setDisplayUsername(parsedUsername);
-    //     }
+        if (usernameData) {
+            const parsedUsername = usernameData;
+            setDisplayUsername(parsedUsername);
+        }
 
+    }, 
+    []); // Empty dependency array ensures the effect runs only once
 
-    // }, 
-    // []); // Empty dependency array ensures the effect runs only once
-
-    // const imgBase64 = localStorage.getItem('imguser');
-    // const mimeType = 'image/jpeg';
+    const imgBase64 = localStorage.getItem('imguser');
+    const mimeType = 'image/jpeg';
 
     const navigate = useNavigate();
 
-    if (location.pathname === '/users') {
+    if (location.pathname === '/register') {
         return null;
       }
 
     if (location.pathname === '/login') {
         return null;
       }
+
+
 
         return(
             <>
@@ -75,7 +77,7 @@ export default function NavbarGuest(){
                             <div className="flex flex-shrink-0 items-center">
                             <img
                                 className="h-9 w-auto"
-                                src="../src/assets/logo/logo2.png"
+                                src={logo}
                                 alt="Your Company"
                             />
                             </div>
@@ -104,12 +106,12 @@ export default function NavbarGuest(){
                             <Menu.Button className="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            {/* <img
+                            <img
                                 className="h-8 w-8 rounded-full"
                                 src={`data:${mimeType};base64,${imgBase64}`}
                                 alt=""
                             />
-                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p> */}
+                            <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p>
                             </Menu.Button>
                         </div>
                         <Transition
