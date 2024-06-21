@@ -91,7 +91,7 @@ const ConsultationCardSlider = () => {
                                             Call
                                         </button>
 
-                                        <button onClick={() => navigate(`/consultation/booking/${key}`)} className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
+                                        <button onClick={() => navigate(`/consultation/booking/${card.Id_teknisi}`)} className="text-xs bg-blue-500 text-white px-3 py-0.5 rounded-md shadow-md mt-2">
                                             Detail
                                         </button>
                                     </div>
