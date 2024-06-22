@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ArrowRightIcon from '../assets/icon/arrow-r.png';
+import ArrowRightIcon from '/assets/icon/arrow-r.png';
 
 const BlogCardSlider = () => {
     const cards = [

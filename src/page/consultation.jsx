@@ -30,7 +30,7 @@ export default function Consultation () {
             <div className="relative w-full md:h-64">
             <img
                 className="h-full w-full object-cover"
-                src="src/assets/content/consultation-hero.jpg"
+                src="/assets/content/consultation-hero.jpg"
                 alt="Random image"
             />
             <div className="absolute inset-0 bg-gray-700 opacity-60"></div>
@@ -70,7 +70,7 @@ export default function Consultation () {
             <div className="">
                 {teknisiAktif.map((teknisi)=>(
                     <div className="flex gap-2 rounded-md border mt-2 mb-3 mx-3 shadow-md">
-                        <img src="../src/assets/technician/me1.jpg" alt="" className="object-fit w-28 h-28 rounded-t-lg md:rounded-none m-2"/>
+                        <img src="/assets/technician/me1.jpg" alt="" className="object-fit w-28 h-28 rounded-t-lg md:rounded-none m-2"/>
                         <div className="flex flex-col justify-between pr-4 py-3">
                             <div>
                                 <h2 className="font-bold text-lg">{teknisi.name}</h2>

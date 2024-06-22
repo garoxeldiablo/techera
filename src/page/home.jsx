@@ -50,10 +50,10 @@ export default function Home() {
     <div className='flex justify-center'>
       <div className="w-5/6 h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>
-          <img src="../src/assets/content/3.png" alt="..." />
-          <img src="../src/assets/content/order.png" alt="..." />
-          <img src="../src/assets/content/website carousel 1.png" alt="..." />
-          <img src="../src/assets/content/website carousel 2.png" alt="..." />
+          <img src="/assets/content/3.png" alt="..." />
+          <img src="/assets/content/order.png" alt="..." />
+          <img src="/assets/content/website carousel 1.png" alt="..." />
+          <img src="/assets/content/website carousel 2.png" alt="..." />
         </Carousel>
       </div>
     </div>

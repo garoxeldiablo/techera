@@ -3,7 +3,7 @@ export default function ActiveFeature(){
         {
             name: 'Jovis Jocunda',
             role: 'Software',
-            img: '../src/assets/technician/me1.jpg',
+            img: '/assets/technician/me1.jpg',
             feature: 'Live chat'
         },
     ]

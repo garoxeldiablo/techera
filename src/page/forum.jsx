@@ -40,7 +40,7 @@ export default function Forum() {
         <div className="relative w-full h-64">
           <img
             className="h-full w-full object-cover"
-            src="src/assets/content/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
+            src="/assets/content/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
             alt="Random image"
           />
           <div className="absolute inset-0 bg-gray-700 opacity-60"></div>

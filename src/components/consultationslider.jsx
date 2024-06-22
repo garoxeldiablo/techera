@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import ArrowRightIcon from '../assets/icon/arrow-r.png';
-import ArrowLeftIcon from '../assets/icon/Arrow.png';
+import ArrowRightIcon from '/assets/icon/arrow-r.png';
+import ArrowLeftIcon from '/assets/icon/Arrow.png';
 import { Rating, RatingStar } from 'flowbite-react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
@@ -40,7 +40,7 @@ const ConsultationCardSlider = () => {
     useEffect(() => {
         const fetchTeknisiData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/teknisi', {
+            const response = await axios.get('https://tchapi.jovis.medanhosting.co.id/teknisi', {
             withCredentials: true,
             });
             setTeknisi(response.data.data);

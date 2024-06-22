@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './store/reducers'
 import { useEffect,useState } from 'react'
 
-import logo from '../assets/logo/logo2.png'
+import logo from '/assets/logo/logo2.png'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },

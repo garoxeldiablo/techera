@@ -76,7 +76,7 @@ export default function DetailOrder() {
               <div>
                 <img
                   className="Ellipse118 w-36 h-36 rounded-full border-4 border-blue-800 mt-5"
-                  src="../src/assets/technician/me1.jpg"
+                  src="/assets/technician/me1.jpg"
                 />
               </div>
               <div className="">
