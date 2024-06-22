@@ -13,7 +13,7 @@ export default function EditProfile() {
         {/* Back button and Change Profile text */}
         <div className=" relative flex items-center mb-10 ml-40">
           <button 
-          onClick={() => navigate('/clientarea')}
+          onClick={() => navigate('/')}
           className="text-blue-800 text-2xl mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ export default function EditProfile() {
           <button
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
-            onClick={() => navigate("/clientarea")}
+            onClick={() => navigate("/")}
           >
             Simpan Perubahan
           </button>
