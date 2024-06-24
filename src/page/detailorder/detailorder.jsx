@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from "../components/footer";
-import ActiveFeature from "../components/activefeature";
-import Payment from "../components/paymentmodal";
-import SuccessModal from "../components/successmodal";
+import Footer from "../../components/footer";
+import ActiveFeature from "../../components/activefeature";
+import Payment from "../../components/paymentmodal";
+import SuccessModal from "../../components/successmodal";
 
 export default function DetailOrder() {
   const navigate = useNavigate();

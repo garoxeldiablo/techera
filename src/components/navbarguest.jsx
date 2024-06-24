@@ -1,6 +1,6 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, } from '@heroicons/react/24/outline'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './store/reducers'
@@ -84,9 +84,9 @@ export default function NavbarGuest(){
                             <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
-                                <a
+                                <button
                                     key={item.name}
-                                    href={item.href}
+                                    onClick={()=>navigate(item.href)}
                                     className={classNames(
                                     item.current ? "border-b-2 border-b-blue-700" : "transition ease-in delay-20 border-b-2 border-white hover:border-b-blue-700",
                                     'px-3 py-2 text-md'
@@ -94,7 +94,7 @@ export default function NavbarGuest(){
                                     aria-current={item.current ? 'page' : undefined}
                                 >
                                     {item.name}
-                                </a>
+                                </button>
                                 ))}
                             </div>
                             </div>
@@ -108,7 +108,8 @@ export default function NavbarGuest(){
                             <span className="sr-only">Open user menu</span>
                             <img
                                 className="h-8 w-8 rounded-full"
-                                src={`data:${mimeType};base64,${imgBase64}`}
+                                // src={`data:${mimeType};base64,${imgBase64}`}
+                                src='../../assets/technician/images.png'
                                 alt=""
                             />
                             <p className='hidden md:block text-base text-blue-900 mx-2 font-semibold'>{displayUsername}</p>

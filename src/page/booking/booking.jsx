@@ -1,7 +1,7 @@
 import { Rating, RatingStar } from "flowbite-react";
-import DateTimeInput from "../components/datetime";
-import Footer from "../components/footer";
-import Modal from "../components/bookmodal";
+import DateTimeInput from "../../components/datetime";
+import Footer from "../../components/footer";
+import Modal from "../../components/bookmodal";
 import { useEffect, useState } from "react";
 import { useNavigate,useParams } from "react-router-dom";
 import axios from "axios";

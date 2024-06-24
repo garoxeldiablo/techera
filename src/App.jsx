@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import SignIn from "./page/signin.jsx" 
-import CreatePost from "./page/createpost"
+import SignIn from "./page/signin/signin.jsx" 
+import CreatePost from "./page/createpost/createpost.jsx"
 import NavbaGuest from "./components/navbarguest"
-import Booking from "./page/booking.jsx"
-import DetailOrder from "./page/detailorder.jsx"
-import EditProfile from "./page/editprofile.jsx";
+import Booking from "./page/booking/booking.jsx"
+import DetailOrder from "./page/detailorder/detailorder.jsx"
+import EditProfile from "./page/editprofile/editprofile.jsx";
 import PrivateRoute from "./components/hooks/privateroute"
 import Home from "./page/home.jsx"
-import Consultation from "./page/consultation.jsx"
-import Forum from "./page/forum.jsx";
-import Blog from "./page/blog.jsx";
-import { SignUp } from "./page/signup.jsx";
+import Consultation from "./page/consultation/consultation.jsx"
+import Forum from "./page/forum/forum.jsx";
+import Blog from "./page/blog/blog.jsx";
+import { SignUp } from "./page/signup/signup.jsx";
 
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';

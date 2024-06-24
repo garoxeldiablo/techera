@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useDispatch } from 'react-redux';
-import { login } from '../components/store/reducers';
+import { login } from '../../components/store/reducers';
 import axios from 'axios'
 
 export default function SignIn() {

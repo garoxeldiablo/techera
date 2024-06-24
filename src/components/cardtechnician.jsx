@@ -5,28 +5,28 @@ export default function CardTechnician(){
         {
             name: 'Jovis Jocunda',
             role: 'Software',
-            img: '../src/assets/technician/me1.jpg',
+            img: '/assets/technician/me1.jpg',
             aosdelay: '100',
             aos: 'fade-right'
         },
         {
             name: 'Agus Bisana',
             role: 'Hardware',
-            img: '../src/assets/technician/a.jpg',
+            img: '/assets/technician/a.jpg',
             aosdelay: '300',
             aos: 'fade-left'
         },
         {
             name: 'Gideon Aji',
             role: 'Networking',
-            img: '../src/assets/technician/g.jpg',
+            img: '/assets/technician/g.jpg',
             aosdelay: '500',
             aos: 'fade-right'
         },
         {
             name: 'Shaela Mayselina',
             role: 'Cyber Security',
-            img: '../src/assets/technician/s.jpg',
+            img: '/assets/technician/s.jpg',
             aosdelay: '700',
             aos: 'fade-left'
         },

@@ -1,4 +1,4 @@
-import Footer from "../components/footer";
+import Footer from "../../components/footer";
 import { useNavigate } from "react-router-dom";
 
 export default function CreatePost() {

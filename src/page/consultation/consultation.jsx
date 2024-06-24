@@ -1,5 +1,5 @@
-import ConsultationCardSlider from "../components/consultationslider";
-import Footer from "../components/footer";
+import ConsultationCardSlider from "../../components/consultationslider";
+import Footer from "../../components/footer";
 import { Rating,RatingStar } from "flowbite-react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';

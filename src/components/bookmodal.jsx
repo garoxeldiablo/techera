@@ -1,5 +1,6 @@
 // src/Modal.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -40,6 +41,8 @@ const Modal = ({ isOpen, onClose }) => {
     }
   ]
 
+  const navigate = useNavigate();
+
   return (
     <div className="md:fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <section className="bg-white rounded-md mt-14">
@@ -62,7 +65,7 @@ const Modal = ({ isOpen, onClose }) => {
                         </li>
                         )}
                     </ul>
-                    <a href="/cart" className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition ease-in">Pilih</a>
+                    <button onClick={()=>navigate('/cart')} className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition ease-in">Pilih</button>
                 </div>
                 ))}
 
