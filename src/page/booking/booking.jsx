@@ -19,7 +19,7 @@ export default function Booking() {
   useEffect(() => {
     const fetchTeknisiId = async () => {
     try {
-        const response = await axios.get(`https://tchapi.jovis.medanhosting.co.id/teknisi/${id}`, {
+        const response = await axios.get(`http://localhost:5000/teknisi/${id}`, {
         withCredentials: true,
         });
         setTeknisi(response.data);

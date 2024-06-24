@@ -8,6 +8,7 @@ import axios from 'axios';
 const ConsultationCardSlider = () => {
     const navigate = useNavigate();
 
+    // jika gagal get data
     // const cards = [
     //     { 
     //         id: 1, 
@@ -40,7 +41,7 @@ const ConsultationCardSlider = () => {
     useEffect(() => {
         const fetchTeknisiData = async () => {
         try {
-            const response = await axios.get('https://tchapi.jovis.medanhosting.co.id/teknisi', {
+            const response = await axios.get('http://localhost:5000/teknisi', {
             withCredentials: true,
             });
             setTeknisi(response.data.data);

@@ -24,7 +24,7 @@ export default function SignIn() {
     e.preventDefault()
 
     try {
-      const response = await axios.post("https://tchapi.jovis.medanhosting.co.id/login", {
+      const response = await axios.post("http://localhost:5000/login", {
           email,
           password,
       },{

@@ -34,7 +34,7 @@ const Payment = ({ isOpen, onClose, onPaymentSuccess }) => {
                 />
                 <span className="text-gray-800">Debit Card</span>
               </label>
-              <img src="src\assets\icon\dc.svg" alt="Visa" className="h-6" />
+              <img src="..\..\assets\icon\dc.svg" alt="Visa" className="h-6" />
             </div>
             <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
               <label className="flex items-center space-x-3">
@@ -45,7 +45,7 @@ const Payment = ({ isOpen, onClose, onPaymentSuccess }) => {
                 />
                 <span className="text-gray-800">Gopay</span>
               </label>
-              <img src="src\assets\icon\gopay.svg" alt="Visa" className="h-6" />
+              <img src="..\..\assets\icon\gopay.svg" alt="Visa" className="h-6" />
             </div>
             <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
               <label className="flex items-center space-x-3">
@@ -56,7 +56,7 @@ const Payment = ({ isOpen, onClose, onPaymentSuccess }) => {
                 />
                 <span className="text-gray-800">Dana</span>
               </label>
-              <img src="src\assets\icon\dana.svg" alt="Visa" className="h-6" />
+              <img src="..\..\assets\icon\dana.svg" alt="Visa" className="h-6" />
             </div>
             <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
               <label className="flex items-center space-x-3">
@@ -67,7 +67,7 @@ const Payment = ({ isOpen, onClose, onPaymentSuccess }) => {
                 />
                 <span className="text-gray-800">Qris</span>
               </label>
-              <img src="src\assets\icon\qris.svg" alt="Visa" className="h-6" />
+              <img src="..\..\assets\icon\qris.svg" alt="Visa" className="h-6" />
             </div>
           </div>
           <hr className="border-blue-700 mb-6" />
